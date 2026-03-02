@@ -1,0 +1,82 @@
+<!-- HTML form validation can be done by JavaScript.
+
+If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted: -->
+
+<!-- Scroll down for bonus question... -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action.php" onsubmit="return formValidate()" method="post">
+        <label for="fname">Enter your name:</label>
+        <input type="text" id="fname" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="script.js"></script> <!-- Linking external JS file. -->
+</body>
+</html>
+
+<!-- 
+Is it necessary to use return onsubmit : <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
+
+ChatGPT said:
+Great question! Let's break it down calmly and clearly:
+
+✅ Your Code:
+________________________________________________
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+________________________________________________
+
+
+💡 Key part:
+_________________________________
+onsubmit="return validateForm()"
+_________________________________
+
+🔍 What does return do here?
+: Yes, return is necessary if your validateForm() function decides whether the form should be submitted or not.
+
+If validateForm() returns:
+
+- true → ✅ Form is submitted.
+
+- false → ❌ Form submission is canceled.
+
+
+🧪 Example:
+___________________________________________________
+function validateForm() {
+  const x = document.forms["myForm"]["age"].value;
+  if (x == "") {
+    alert("Age must be filled out");
+    return false;  // Form will not be submitted
+  }
+  return true; // Form will be submitted
+}
+___________________________________________________
+
+
+😥 If you wrote this without return:
+____________________________
+onsubmit="validateForm()"
+____________________________
+Even if validateForm() returns false, the form will still submit, because you're not capturing the result.
+
+
+
+✅ Summary:
+Syntax	                            Form Submission
+
+onsubmit="return validateForm()":	Controlled by return value
+
+onsubmit="validateForm()"	        Always submits unless preventDefault() is used 
+
+-->
+

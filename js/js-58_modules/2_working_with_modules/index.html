@@ -1,0 +1,39 @@
+<!-- In this example, we are demonstrating the modules in JS.
+
+In this setup:
+- main.js is imported in index.html using type="module".
+- main.js imports from another JS file (message.js).
+- No need to import message.js directly in index.html. 
+
+
+_____________________
+⚠️ Important Notes:
+
+1. All files using import or export must be declared as modules (type="module").
+
+2. Module paths must be relative or absolute,       like ./message.js (extensions are required unless using a bundler like Webpack).
+
+3. If using a local file system (file:///), you may get CORS or module loading issues — it's best to use a local server.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demonstrating modules in JS</h1>
+    <p id="demo"></p>
+
+    <!-- linking external js file -->
+    <script type="module" src="script.js"></script>
+    <!-- This tells the browser:
+    📌 "Hey, main.js is a JavaScript module."
+    And because it's a module, main.js is allowed to use import and export.
+
+    Without type="module", using import or export would throw a syntax error. -->
+</body>
+</html>
