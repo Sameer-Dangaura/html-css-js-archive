@@ -1,0 +1,145 @@
+<!-- An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.relative{       /* parent div  */
+            position: relative;
+            border: 3px solid green;
+            width: 400px;
+            height:250px;
+        }
+        div.absolute{       /* child div  */
+            position: absolute;
+            border: 3px solid green;
+            background-color: aquamarine;
+            width: 200px;
+            height:60px;
+            right: 0px; /*sets gap between right side of relative div and absolute div */
+            top: 90px;  /*sets gap between top of the relative div and absolute div */
+        }
+        div.fixed{          /* child div  */
+            position: fixed;
+            border: 5px solid green;
+            background-color: aquamarine;
+            width: 200px;
+            right: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h2>position: absolute;</h2>
+    
+    <p>An element with <b>position: absolute;</b> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).</p>
+
+    <p style="font: 18px Verdana, sans-serif;">Since, both the absolute div and fixed div were the child of relative div. But, when we applied style to them you can see the difference. The absolute div is styled according to parent div But the fixed div is styled according to window.</p>
+
+    <div class="relative">
+        <p style="background-color: aquamarine;">This div element has position: relative;</p>
+
+        <div class="absolute"> <!-- This div is child of relative div  -->
+            <p>This div element has position: absolute;</p>
+        </div>
+
+        <div class="fixed"> <!-- This div is child of relative div  -->
+            <p>This div element has position: fixed;</p>
+        </div>
+
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+        <p>The div element is absolute. Try to scroll down the page.</p>
+      
+    </div>
+
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+    <p>The div element is relative. Try to scroll down the page.</p>
+</body>
+</html>

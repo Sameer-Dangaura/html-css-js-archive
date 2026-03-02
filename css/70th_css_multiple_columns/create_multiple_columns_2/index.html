@@ -1,0 +1,43 @@
+<!-- 
+
+Here, we are going to divide the block level element in the <div> element into 3 columns using   column-count  property:  
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            column-count: 3;
+        }
+        .box1{
+            border: 1px solid black;
+            background-color: darkblue;
+            height: 80px;
+        }
+        .box2{
+            border: 1px solid black;
+            background-color: blueviolet;
+            height: 80px;
+        }
+        .box3{
+            border: 1px solid black;
+            background-color: blue;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating three columns of block level elements </h1>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

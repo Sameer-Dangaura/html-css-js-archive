@@ -1,0 +1,126 @@
+<!-- Fixed Navigation Bar
+:
+Make the navigation bar stay at the top or the bottom of the page, even when the user scrolls the page: 
+For that do:
+
+-> set <ul> to position: fixed;  with top: 0px gap;
+
+
+There is:
+->internal css
+->inline css also.
+So consider both of them.
+
+
+
+________________________________________________________
+# Tip: While working with   'position'  property make sure you know about their flow types. For that do visit "42th_css_position/flow_of_positioned_element"...
+_________________________________________________________
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;    /* Removing default margin of body.
+            because of the absence of  this,  took a lot of time of mine for removing the left margin gap. */
+        }
+        ul {  
+            list-style-type: none;  
+            padding: 0px;   
+            margin: 0px;   
+            overflow: hidden; /* is added to the ul element to prevent li elements from going outside of the list. */
+            background-color: #333;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+        }
+        ul li{
+            float: left;    /*  Use float to get block elements to float next to each other. 
+
+            Since,  block level element do not float next to each by default        like inline and inline-block. */
+        }
+        ul li a{
+            display: block; /* Since, <a> is inline element. So display: block;  
+
+            Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want) */
+
+            text-decoration: none;
+            padding: 14px 16px; /* Specify some padding between each <a> element, to make them look good */
+            color: white;
+        }
+        ul li a:hover{
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contactus">Contact us</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <div style="padding: 10px; margin-left: 0px; margin-top: 40px; border: 1px solid #f1f1f1; background-color: #1abc9c;">
+    <!-- ----------------------------------------------
+    Tip: From my experience:
+    -----
+    -> If margin : 0px; is not working, 
+        Then, set the border and then it will work.
+    -------------------------------------------------->
+
+
+        <h1>Fixed Top Navigation Bar</h1>
+
+        <p><strong>Scroll this page to see the effect</strong></p>
+
+        <p style="background-color: yellow;"><b>Note:</b> Fixed position might not work properly on mobile devices.</p>
+
+        <p><b>Note:</b> If a !DOCTYPE is not specified, floating items can produce unexpected results.</p>
+
+        <p><strong>The navigation bar will stay at the top of the page while scrolling</strong></p>
+
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+
+    </div>
+</body>
+</html>

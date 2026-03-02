@@ -1,0 +1,35 @@
+<!-- To center an image:
+
+Since, <img> is inline element. So, at first make it block level (i.e. set to    display: block; ).
+Then:
+
+Method-1: margin: auto  wala method like as div.
+
+Method-2: set left and right margin to auto and make it into a block element: -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            display: block; /* since, <img> is an inline. */
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Center an Image</h1>
+
+    <p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+
+    <img src="../img/plant_img.png" alt="plant_img">
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!-- A simple form with responsiveness styling using css: 
+ -by me :).
+ 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .form-container{
+            background-color: #f2f2f2;
+            padding: 20px 24px; /* Giving form-container good look. */
+            font-size: 18px; 
+            width: 550px;
+            margin: auto;   /* setting form-container horizontally aligned center. */
+            border-radius: 5px;
+        }
+        input[type="text"], select {
+            display: block; /* Since, <input> is inline level element so, making block level element. Which enable us to take control of height/width/padding/margin.  */
+            margin: 10px 10px 10px 0px;    /* setting  gap excluding left. */
+            width: 100%;    /* setting width 100% of form-container's width 550px. */
+            padding: 14px 16px; /* Giving input box and select box good look. */
+        }
+        input[type="submit"]{
+            display: block; /* Since, <input> is inline level element so, making block level. */
+            width: 100%;    /* setting width 100% of form-container's width 550px. */
+            padding: 14px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 8px 0px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: #45a049;
+        }
+        @media screen and (max-width:500px){
+            .form-container{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Using css to style an HTML Form</h1>
+
+    <div class="form-container">
+        <form action="/action_page.php">
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+
+            <label for="country">Select your country</label>
+            <select name="country" id="country">
+                <option value="nepal">Nepal</option>
+                <option value="india">India</option>
+                <option value="america">America</option>
+            </select>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+</body>
+</html>

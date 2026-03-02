@@ -1,0 +1,45 @@
+> CSS Text
+-----------
+:
+CSS has a lot of properties for    formatting text.
+                                    ______________
+
+
+>Text Color
+------------
+:
+The color property is used to set the color of the text. The color is specified by:
+
+a color name - like "red"
+a HEX value - like "#ff0000"
+an RGB value - like "rgb(255,0,0)"
+Look at CSS Color Values for a complete list of possible color values.
+
+The default text color for a page is defined in the body selector.
+_________________________________________________________________
+Example: do visit "text_color" folder.
+                  ____________
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+________________________________________________________________
+
+
+
+
+> Text color and background color
+---------------------------------
+:
+In this example, we define both the background-color property and the color property:
+
+Example: do visit "text_color_n_background_color" folder.
+
+
+Important:
+ High contrast is very important for people with vision problems. So, always ensure that the contrast between the text color and the background color (or background image) is good!
+
+

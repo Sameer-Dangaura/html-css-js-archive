@@ -1,0 +1,150 @@
+<!-- 
+Creating responsive image gallery like a pininterest: image gallery that varies between four, two or full-width images, depending on screen size: 
+
+ 
+An idea is simple:
+- we have to make one flex-container can be named as 'row'
+- and then that flex-container gonna have four flex items can be named as 'column'
+- where, each column container gonna contain images vertically.
+- That's it.
+- and for responsive, we have to control the layout of column container.
+
+
+_________________________________________________________
+> Tip- Related to working with images:
+--------------------------------------
+-> do always use two containers 
+    (one is parent container and another is child container, where child container gonna contain the image) while working with responsive layout for images 
+        (Here, I'm not talking about responsive images. I'm talking about responsive layout for images).
+
+-> and then set the width of img to 100% having controlling the width of child container.
+
+-> and done. Now you can control the layout of images for responsiveness.
+
+# For references, you take reference of this example and make sure you visit "56th_css_image_gallery", "61th_css_website_layout/responsive_web_layout" also.
+
+
+# Like this example using flex shorthand property with responsive is also done in "21th_html_layout/HTML_layout_techniques/css_flexbox_layout". But there we used flex-grow instead of flex-basis.
+________________________________________________________
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        header{
+            text-align: center;
+            font-size: 25px;
+        }
+
+        /* styling .row container */
+        .row{
+            display: flex;  /* making row contianer as flex container to achieve flexbox layout */
+
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* styling .column container or you can say as flex items of .row container */
+        .column{
+            flex: 25%;  /* flex shorthand property having the value of flex-basis: 25% (that means every flex items gonna take 25% length of flex box). Explicitly making flex items in row direction */
+
+            max-width: 25%;
+
+            padding: 0 4px; /* We gave padding for left and right to get space between the images (which is not actual the space it is just an illusion for space which is geted by the background color of .column container). */
+
+            /* Here, I removed margin: 5px; because it was making trouble to align 4th column in horizontal aligning. And note that there is no relation between the  box-sizing: border-box; and margin. */
+        }
+
+        img{
+            border-radius: 5px;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px){
+            .column{
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 500px){
+            .column{
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive image gallery</h1>
+        <p>Resize the browser window to see the responsive effect.</p>
+    </header>
+
+    <div class="row">
+        <div class="column">
+            <a href="../img/1.png"><img src="../img/1.png" alt="image-1" style="width:100%;"></a>
+            <a href="../img/2.png"><img src="../img/2.png" alt="image-2" style="width:100%;"></a>
+            <a href="../img/3.png"><img src="../img/3.png" alt="image-3" style="width:100%;"></a>
+            <a href="../img/4.png"><img src="../img/4.png" alt="image-4" style="width:100%;"></a>
+            <a href="../img/5.png"><img src="../img/5.png" alt="image-5" style="width:100%;"></a>
+            <a href="../img/6.png"><img src="../img/6.png" alt="image-6" style="width:100%;"></a>
+            <a href="../img/7.png"><img src="../img/7.png" alt="image-7" style="width:100%;"></a>
+            <a href="../img/8.png"><img src="../img/8.png" alt="image-8" style="width:100%;"></a>
+            <a href="../img/9.png"><img src="../img/9.png" alt="image-9" style="width:100%;"></a>
+            <a href="../img/10.png"><img src="../img/10.png" alt="image-10" style="width:100%;"></a>
+        </div>
+
+        <div class="column">
+            <a href="../img/11.png"><img src="../img/11.png" alt="image-11" style="width:100%;"></a>
+            <a href="../img/12.png"><img src="../img/12.png" alt="image-12" style="width:100%;"></a>
+            <a href="../img/13.png"><img src="../img/13.png" alt="image-13" style="width:100%;"></a>
+            <a href="../img/14.png"><img src="../img/14.png" alt="image-14" style="width:100%;"></a>
+            <a href="../img/15.png"><img src="../img/15.png" alt="image-15" style="width:100%;"></a>
+            <a href="../img/16.png"><img src="../img/16.png" alt="image-16" style="width:100%;"></a>
+            <a href="../img/17.png"><img src="../img/17.png" alt="image-17" style="width:100%;"></a>
+            <a href="../img/18.png"><img src="../img/18.png" alt="image-18" style="width:100%;"></a>
+            <a href="../img/19.png"><img src="../img/19.png" alt="image-19" style="width:100%;"></a>
+            <a href="../img/1.png"><img src="../img/1.png" alt="image-1" style="width:100%;"></a>
+        </div>
+
+        <div class="column">
+            <a href="../img/2.png"><img src="../img/2.png" alt="image-2" style="width:100%;"></a>
+            <a href="../img/3.png"><img src="../img/3.png" alt="image-3" style="width:100%;"></a>
+            <a href="../img/4.png"><img src="../img/4.png" alt="image-4" style="width:100%;"></a>
+            <a href="../img/5.png"><img src="../img/5.png" alt="image-5" style="width:100%;"></a>
+            <a href="../img/6.png"><img src="../img/6.png" alt="image-6" style="width:100%;"></a>
+            <a href="../img/7.png"><img src="../img/7.png" alt="image-7" style="width:100%;"></a>
+            <a href="../img/8.png"><img src="../img/8.png" alt="image-8" style="width:100%;"></a>
+            <a href="../img/9.png"><img src="../img/9.png" alt="image-9" style="width:100%;"></a>
+            <a href="../img/10.png"><img src="../img/10.png" alt="image-10" style="width:100%;"></a>
+            <a href="../img/11.png"><img src="../img/11.png" alt="image-11" style="width:100%;"></a>
+        </div>
+
+        <div class="column">
+            <a href="../img/12.png"><img src="../img/12.png" alt="image-12" style="width:100%;"></a>
+            <a href="../img/13.png"><img src="../img/13.png" alt="image-13" style="width:100%;"></a>
+            <a href="../img/14.png"><img src="../img/14.png" alt="image-14" style="width:100%;"></a>
+            <a href="../img/15.png"><img src="../img/15.png" alt="image-15" style="width:100%;"></a>
+            <a href="../img/16.png"><img src="../img/16.png" alt="image-16" style="width:100%;"></a>
+            <a href="../img/17.png"><img src="../img/17.png" alt="image-17" style="width:100%;"></a>
+            <a href="../img/18.png"><img src="../img/18.png" alt="image-18" style="width:100%;"></a>
+            <a href="../img/19.png"><img src="../img/19.png" alt="image-19" style="width:100%;"></a>
+            <a href="../img/1.png"><img src="../img/1.png" alt="image-1" style="width:100%;"></a>
+            <a href="../img/2.png"><img src="../img/2.png" alt="image-2" style="width:100%;"></a>
+        </div>
+    </div>
+</body>
+</html>

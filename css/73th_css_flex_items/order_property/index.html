@@ -1,0 +1,39 @@
+<!-- Example using order property: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling 'div.flex-container' */
+        .flex-container{
+            display: flex; /* making the 'div.flex-container' as flex container */
+
+            background-color: blue;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>The order property</h1>
+    <p>Use the order property to sort the flex items as you like:</p>
+
+    <div class="flex-container">
+        <div style="order: 4;">1</div>
+        <div style="order: 2;">2</div>
+        <div style="order: 3;">3</div>
+        <div style="order: 1;">4</div>
+    </div>
+</body>
+</html>

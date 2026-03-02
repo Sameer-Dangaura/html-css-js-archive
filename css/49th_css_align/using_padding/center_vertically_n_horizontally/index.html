@@ -1,0 +1,33 @@
+<!-- To center both vertically and horizontally, use padding and text-align: center: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 3px solid green;
+            /* height: 300px;   /* not needed to give height because padding value 100px value for top/bottom gonna make height and align text vertically centered.*/
+        }
+        .center{
+            border: 3px solid #f1f1f1;  /* This is not actual border which we are assuming. This is just for checking the border of <p> inside's <div>. */
+            text-align: center;
+            padding: 100px 0;/* sets 100px to top/bottom and nothing(0) to left/right. 
+            Since we haven't use *{box-sizing: border-box;} that's why the padding value is added to height.*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Center vertically and horizontally using padding and text-align: center;</h1>
+
+    <p>In this example, we use padding and text-align to center the div element both vertically and horizontally:</p>
+
+    <div>
+        <p class="center">I am  centered.</p>
+    </div>
+</body>
+</html>

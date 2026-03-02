@@ -1,0 +1,51 @@
+<!-- 
+Using flex-grow property, I have done in "21th_html_layout/HTML_layout_techniques/css_flexbox_layout" But there I used flex shortand property which uses a combination of three properties: flex-grow, flex-shrink, and flex-basis. 
+
+
+Example using flex-grow property:  
+
+The flex-grow property is seted in inline css.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling 'div.flex-container' */
+        .flex-container{
+            display: flex; /* making the 'div.flex-container' as flex container */
+
+            background-color: blue;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>The flex-grow property</h1>
+    <p>Make the third flex item grow <strong>eight times</strong> faster than the other flex items:</p>
+
+    <div class="flex-container">
+        <div style="flex-grow: 0;">0</div>  <!-- Makes the 0th flex item grow 0-times than others, which is a default value also. -->
+
+        <div style="flex-grow: 1;">1</div>  <!-- Makes the 1st flex item grow 1-times than others. -->
+
+        <div style="flex-grow: 1;">2</div>
+
+        <div style="flex-grow: 8;">3</div>  <!-- Makes the third flex item grow 8-times than others. -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- # Normally div elements will be displayed on top of each other. However, if we use float: left we can let elements float next to each other: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            float: left;
+            padding: 20px;  /* This makes div conatainers bulk and large */
+        }
+        .div1{
+            background-color: yellow;
+        }
+        .div2{
+            background-color: green;
+        }
+        .div3{
+            background-color: blue;
+        }
+        .div4{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float Next To Each Other</h1>
+    <p>We used padding to make div containers a little bit bulk or larger. Let's understand how: <br>
+    -> "Div _" text is used to padding with div conatainer's border and sets the space between the text and the border of the div container.
+    </p>
+
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+    <div class="div4">Div 4</div>
+</body>
+</html>

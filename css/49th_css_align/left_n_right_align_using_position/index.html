@@ -1,0 +1,53 @@
+<!-- One method for aligning elements is to use position: absolute; -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .right_align{
+            position: absolute; 
+            width: 300px;
+            border: 3px solid green; 
+            background-color: yellow; 
+
+            /* since element is positioned absolute, now you can move anywhere in window: */
+            right: 0px;  /* sets the gap 0px between right window side and 'right_align named div'. */
+             
+        }
+        .center_align{
+            position: absolute;
+            width: 300px;
+            border: 3px solid green;  
+            background-color: yellow; 
+            
+            /* since element is positioned absolute, now you can move anywhere in window: */
+            top: 350px;  /* sets gap 350px between top of window and 'center_align named div'. */
+            left: 30%;   /* sets gap 30% between left of window and 'center_align named div'. */
+        }
+        .text{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body style="height:1200px;">
+    <h1>Aligning elements using position: absolute;</h1>
+
+
+    <h2>Right align</h2>
+    <div class="right_align">
+        <p class="text">This is right aligned.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum dignissimos quibusdam sapiente reiciendis ratione nisi vitae tenetur nihil, harum non.</p>
+    </div>
+
+    <h2>Center align</h2>
+    <div class="center_align">
+        <p class="text">This is center aligned.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae delectus ducimus a consequatur accusantium obcaecati nemo enim. Quod, ipsum!</p>
+    </div>
+</body>
+</html>

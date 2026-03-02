@@ -1,0 +1,68 @@
+<!-- Styling Forms
+- using the attribute selectors.
+- The attribute selectors can be useful for styling forms without class or ID: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]{
+            width: 150px;
+            display: block; /* Since <input> is inline level element. So making them block level then, they will act like block container and will allow us to set their height/width. */
+            margin-bottom: 10px;
+            background-color: yellow;
+            padding: 8px 10px;  /* Giving them better look. */
+        }
+        input[type=submit]{
+            background-color: rgb(69, 69, 250);
+            display: block; /* making block level. */
+            padding: 8px 10px; /* Giving them better look. */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Styling Form</h1>
+
+<!--    |This form is for without styling.
+
+    <form name="form1" action="" method="get">
+             |
+             |- the   name   of the form used to specify which form to submit.
+
+             The   name   attribute specifies the name of a form.
+
+             The   name   attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted. 
+        
+             
+        
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" name="firstname" value="Peter" size="20">
+            <br><br>
+            <label for="lastname">Lastname:</label>
+            <input type="text" id="lastname" name="lastname" value="Griffin" size="20">
+            <br><br>
+            <input type="submit" value="Submit">
+          
+    </form> 
+    
+-->
+
+    <form name="form2" action="" method="get">
+        
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" name="firstname" value="Peter" size="20">
+            <!--removed <br><br>-->
+            <label for="lastname">Lastname:</label>
+            <input type="text" id="lastname" name="lastname" value="Griffin" size="20">
+            <!--removed <br><br>-->
+            <input type="submit" value="Submit">
+          
+    </form>
+</body>
+</html>

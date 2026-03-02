@@ -1,0 +1,34 @@
+<!-- Just an example to center things using flexbox: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            display: flex;  /* Activates the Flexbox layout on the .center container.
+            Makes all child elements of .center flex items, which can be aligned and distributed easily. */
+            
+            border: 3px solid green;
+            height: 200px;
+
+            justify-content: center;    /* Aligns flex items horizontally in the center of the container. */
+
+            align-items: center;    /* Aligns flex items vertically in the center of the container. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Centering</h1>
+
+    <p>A container with both the justify-content and the align-items properties set to <em>center</em> will align the item(s) in the center (in both axis).</p>
+
+    <div class="center">
+        <p>I am centered.</p>
+    </div>
+</body>
+</html>

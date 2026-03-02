@@ -1,0 +1,48 @@
+<!-- To left-align the content, force the alignment of <th> elements to be left-aligned, with the text-align: left property: -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 50%; /* making table only half of page  */
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;  /* to avoid double border in table  */
+        }
+        th{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aligning the text to center in table</h1>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td>Chaudhary</td>
+        </tr>
+        <tr>
+            <td>Hari</td>
+            <td>Chaudhary</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+
+An element can have a positive or negative stack order: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute; /* this style property also plays an important role here. */
+            top: 0px;
+            left: 0px;
+            z-index: -1;    
+        }
+    </style>
+</head>
+<body>
+    <h1>This is heading</h1>
+
+    <img src="../img/plant_img.png" alt="plant_img" style="max-width: 100%">
+
+    <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+    <p><b>Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements).</b></p>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!-- The following example shows the different behavior of display: inline, display: inline-block and display: block: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        span.a{
+            display: inline; /* This is the default nature of span. */
+            border: 3px solid green;
+            margin: 3px;
+            background-color: yellow;
+            width: 100px; /* This is not gonna work because it is inline. */
+            height: 80px; /* This is also not gonna work because it is inline. */
+        }
+        span.b{
+            display: inline-block;
+            border: 3px solid green;
+            margin: 3px;
+            background-color: yellow;
+            width: 100px;
+            height: 80px;
+            text-align: center; /* to make text align center horizontally. */
+            padding-top: 30px;  /* to make text align center vertically   and make sure you have used *{box-sizing: border-box;} */
+        }
+        span.c{
+            display: block;
+            border: 3px solid green;
+            margin: 3px;
+            background-color: yellow;
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;  /* to make text align center vertically   and make sure you have used *{box-sizing: border-box;} */
+        }
+    </style>
+</head>
+<body>
+    <h1>The display property</h1>
+
+
+    <h2>Span element having display: inline</h2>
+    <p>span element is by default inline.</p>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate hic doloribus in magni natus, facilis accusamus eaque aut ad atque.
+        
+        <span class="a">span 1</span>
+        <span class="a">span 2</span>
+        <span class="a">span 3</span>
+    </div>
+
+
+    <h2>span element having display: inline-block</h2>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iusto voluptatum laboriosam impedit sed suscipit quasi natus rem aspernatur ullam?
+
+        <span class="b">span 1</span>
+        <span class="b">span 2</span>
+        <span class="b">span 3</span>
+    </div>
+
+
+    <h2>span element having display: block</h2>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo autem quam sunt aliquid inventore sint vel veniam libero quis harum.
+
+        <span class="c">span 1</span>
+        <span class="c">span 2</span>
+        <span class="c">span 3</span>
+    </div>
+</body>
+</html>

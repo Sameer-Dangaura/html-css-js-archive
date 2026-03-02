@@ -1,0 +1,45 @@
+<!-- Here, we gonna specify a 60px gap between the columns of "create_multiple_columns_2".
+
+The following example specifies a 60 pixels gap between the columns: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            column-count: 3;
+            column-gap: 60px;
+            background-color: #333;
+            padding: 35px 10px;
+        }
+        .box1{
+            border: 1px solid black;
+            background-color: darkblue;
+            height: 80px;
+        }
+        .box2{
+            border: 1px solid black;
+            background-color: blueviolet;
+            height: 80px;
+        }
+        .box3{
+            border: 1px solid black;
+            background-color: blue;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating three columns of block level elements and specifying a 60px gap between those columns</h1>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

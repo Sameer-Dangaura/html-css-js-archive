@@ -1,0 +1,32 @@
+<!-- Center an Image Vertically and horizontally using flexbox: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;  /* since <div> is block, so we are changing it to flex that means we are making it as flex container. Where flex container contain its child as flex items. */
+
+            justify-content: center;    /* centers the image horizontally in the div container */
+
+            align-items: center;    /* centers the image vertically in the div container */
+            
+            height: 600px;
+            border: 1px solid black;
+        }
+        img{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Centering image horizontally and Vertically</h1>
+    <div>
+        <img src="../img/img2.png" alt="house image">
+    </div>
+</body>
+</html>

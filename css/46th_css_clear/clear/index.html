@@ -1,0 +1,51 @@
+<!-- This example clears the float to the left. Here, it means that the <div2> element is pushed below the left floated <div1> element:  -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            width: 50px;
+            height: 30px;
+            border: 3px solid green;
+            float: left;
+        }
+        .div2{
+            height: 60px;
+            border: 3px solid red;
+        }
+        .div3{
+            width: 50px;
+            height: 30px;
+            border: 3px solid green;
+            float: left;
+        }
+        .div4{
+            height: 60px;
+            border: 3px solid red;
+            clear: left;    /* Let, floated element will continue to float, but the cleared element will appear below it on the web page. */
+        }
+    </style>
+</head>
+<body>
+    <h2>Without clear: below elements also floats</h2>
+
+    <div class="div1">Div 1</div>
+
+    <div class="div2">Div 2 -> Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+    
+
+    <h2>With clear: cleared element will appear below it on the web page.</h2>
+
+    <div class="div3">Div 3</div>
+
+    <div class="div4">Div 4 -> Here, <b>clear: left;</b> moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+</body>
+</html>

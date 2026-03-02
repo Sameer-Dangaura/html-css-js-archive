@@ -1,0 +1,121 @@
+<!-- Create a full-height, "sticky" side navigation: -->
+
+<!-- we have used:
+-> inline css = inside div element.
+-> internal css = inside the head. 
+
+
+________________________________________________________
+# Tip: While working with   'position'  property make sure you know about their flow types. For that do visit "42th_css_position/flow_of_positioned_element"...
+_________________________________________________________
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;    /* Removing default margin of body.
+            because of the absence of  this,  took a lot of time of mine for removing the top margin gap. */
+        }
+        ul {        
+            list-style-type: none;  
+            padding: 0px;   
+            margin: 0px;    
+            width: 20%;    /* set to 20% width */
+            background-color: #f1f1f1;
+            position: fixed;    /* set to fixed 'ul' list */
+            height: 100%;
+            overflow: auto; /* Similar to scroll, but it adds scrollbars only when necessary */
+        }
+        li a{
+            display: block; 
+            text-decoration: none;
+            padding: 8px 16px;
+            color: #000;
+        }
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contactus">Contact us</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <!--
+    IMP style:
+    ----------
+        without this the layout will be overlap.
+    -->
+    <div style="margin-left: 20%; padding: 0px; border: 1px solid #f1f1f1;">
+
+        <h1>Vertical nav bar</h1>
+
+        <h2>Fixed Full-height Side Nav</h2>
+
+        <p><strong>Try to scroll this area, and see how the sidenav sticks to the page</strong></p>
+
+        <p>Notice that this div element has a left margin of 20%. This is because the side navigation is set to 20% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+
+
+    </div>
+</body>
+</html>

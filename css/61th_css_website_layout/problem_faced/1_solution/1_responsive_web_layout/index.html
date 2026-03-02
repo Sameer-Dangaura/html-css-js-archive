@@ -1,0 +1,158 @@
+<!-- A responsive website layout using float property: -->
+
+<!--
+Problem-1: Image is overlapping from main container's right side to left side of aside container. 
+It is because the 'img-container' is taking width 100% as well as the padding is also getting added with width, which makes 'img-container''s total width = padding + 100% width;
+
+---------
+Solution: There are two solution's came in my mind:
+---------
+i) Either remove the 'main section div.img-container' width: 100% and set padding, will prevent from overlapping.
+i.e.
+
+main section div.img-container{
+            padding: 10px;  /* set padding only. */ 
+        }
+
+ii) OR, set the:  box-sizing: border-box;  which avoid the manipulation of it's original width, even though you add a lot of padding to it. 
+i.e.
+
+main section div.img-container{
+            width: 100%;
+            padding: 10px;  
+            box-sizing: border-box; 
+        }
+
+
+- These above two techniques are also working because of this style property is applied to their inside's img:
+main section div.img-container img{
+            width: 100%;
+        }
+
+That means the 'img' is only taking width 100% of the 'div.img-container'.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width: 100%;
+        }
+        header h1{
+            width: 190px;
+            margin: auto;
+            padding: 12px 14px;
+        }
+        header p{
+            width: 260px;
+            margin: auto;
+        }
+        nav{
+            margin: 20px 0px;
+        }
+        nav ul{
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #333;
+            padding: 0px;
+        }
+        nav ul li{
+            float: left;
+        }
+        nav ul li a{
+            text-decoration: none;
+            display: block;
+            color: white;
+            padding: 14px 16px;
+        }
+        nav ul li a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        main{
+            width: 75%;
+            float: left;
+        }
+        aside{
+            width: 25%;
+            float: left;
+        }
+        main section div.img-container{
+            padding: 10px;  
+        }
+        main section div.img-container img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <p>Resize the browser to see the effect.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li style="float:right"><a href="#">Link</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Jan 1, 2025 </p>
+            <div class="img-container">
+                <img src="../../../img/arbitrary_img.png" alt="blank image">
+            </div>
+            <p>Some text...</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, nemo.</p>
+        </section>
+
+        <section>
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Jan 1, 2025 </p>
+            <div class="img-container">
+                <img src="../../../img/arbitrary_img.png" alt="blank image">
+            </div>
+            <p>Some text...</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, nemo.</p>
+        </section>
+    </main>
+    <aside>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <div class="img-container">
+                <img src="../../../img/arbitrary_img.png" alt="blank image">
+            </div>
+            <p>Some text about me Lorem ipsum dolor sit amet.</p>
+        </section>
+
+        <section id="popular-post">
+            <h2>Popular Post</h2>
+            <div class="img-container">
+                <img src="../../../img/arbitrary_img.png" alt="blank image" style="width: 220px; height: 100px;">
+            </div>
+            <div class="img-container">
+                <img src="../../../img/arbitrary_img.png" alt="blank image" style="width: 220px; height: 100px;">
+            </div>
+            <div class="img-container">
+                <img src="../../../img/arbitrary_img.png" alt="blank image" style="width: 220px; height: 100px;">
+            </div>
+        </section>
+
+        <section id="follow-me">
+            <h2>Follow Me</h2>
+            <p>Some text...</p>
+        </section>
+    </aside>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!-- A simple responsive image gallery which are clickable: -->
+
+<!--
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div.gallery{
+            margin: 5px;
+            border: 1px solid black;
+            /* Here, we removed width, and float property. */
+        }
+         div.gallery img{
+            width: 100%;    /* since, the div.gallery width is 180px so the img which is inside div.gallery will cover width 100% (i.e. 180px) of div.gallery. */
+            height: 160px;  /* since, the div.gallery's height was not initialized so the 'div.gallery img' + '.describe' will set  height of div.gallery. */
+         }
+         div.gallery:hover {
+            box-shadow: 3px 3px 5px 0px black;  
+         }
+         div.gallery .describe{
+            padding: 12px 14px;
+            text-align: center;
+         }
+        .responsive{
+            padding: 0px 6px;
+            width: 24.99999%;
+            float: left;
+        }
+        @media screen and (max-width:900px)
+        {
+            .responsive{
+                width: 49.99999%;
+            }
+        }
+        @media screen and (max-width: 450px)
+        {
+            .responsive{
+                width: 100%;
+            }
+        }
+        .clearfix::after{   /* clearfix hack to prevent the content floating below's image gallery. */  
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>A simple Image gallery:</h1>
+    <p><b>Resize the browser window to see the effect.</b></p>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img1.png">  <!--making clickable image-->
+                <img src="../img/img1.png" alt="img1" style="width: 600; height: 400;">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img2.png">  <!--making clickable image-->
+                <img src="../img/img2.png" alt="img2" style="width: 600; height: 400;">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img3.png">  <!--making clickable image-->
+                <img src="../img/img3.png" alt="img3" style="width: 600; height: 400;">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img4.png">  <!--making clickable image-->
+                <img src="../img/img4.png" alt="img4" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img5.png">  <!--making clickable image-->
+                <img src="../img/img5.png" alt="img5" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img6.png">  <!--making clickable image-->
+                <img src="../img/img6.png" alt="img6" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img7.png">  <!--making clickable image-->
+                <img src="../img/img7.png" alt="img7" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img8.png">  <!--making clickable image-->
+                <img src="../img/img8.png" alt="img8" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img9.png">  <!--making clickable image-->
+                <img src="../img/img9.png" alt="img9" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="../img/img10.png">  <!--making clickable image-->
+                <img src="../img/img10.png" alt="img10" width="600" height="400">
+            </a>
+            <div class="describe">Add a description of the image here </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div> <!--arbitary div for clearfix-->
+
+    <p>
+        This example use media queries to re-arrange the images on different screen sizes: for screens larger than 900px wide, it will show four images side by side, for screens smaller than 900px, it will show two images side by side. For screens smaller than 450px, the images will stack vertically (100%).
+    </p>
+</body>
+</html>

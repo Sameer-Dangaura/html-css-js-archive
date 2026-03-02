@@ -1,0 +1,13 @@
+> CSS Rounded Borders
+----------------------
+:
+The   border-radius   property is used to add rounded borders to an element:
+
+Example
+-------------------
+p {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+-------------------
+

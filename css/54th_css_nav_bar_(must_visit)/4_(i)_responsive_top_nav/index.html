@@ -1,0 +1,65 @@
+<!-- 
+Responsive Topnav (normal topnav or position default topnav):
+:
+How to use CSS media queries to create a responsive top navigation.
+=>
+Answer is:
+-> just remove float.
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {  
+            list-style-type: none;  
+            padding: 0px;   
+            margin: 0px;   
+            overflow: hidden; 
+            background-color: #333;
+        }
+        ul li{
+            float: left;    
+        }
+        ul li a{
+            display: block; 
+            text-decoration: none;
+            padding: 14px 16px; 
+            color: white;
+        }
+        ul li a:hover{
+            background-color: #111;
+        }
+        /* Setting up for responsive nav bar */
+        @media screen and (max-width: 600px){
+            ul li{
+                float: none;    /* remove float */
+                text-align: center; /* center align text */
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contactus">Contact us</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <h1>Responsive Topnav Example</h1>
+
+    <p>This example use media queries to stack the topnav vertically when the screen size is 600px or less.</p>
+
+    <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+
+    <p><b>Resize the browser window to see the effect.</b></p>
+</body>
+</html>

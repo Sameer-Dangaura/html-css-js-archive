@@ -1,0 +1,26 @@
+> CSS Border - Individual Sides
+--------------------------------
+:
+From the examples on the previous pages, you have seen that it is possible to specify a different border for each side.
+
+In CSS, there are also properties for specifying each of the borders (top, right, bottom, and left):
+
+Example:
+-------------------------------
+p {
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+-------------------------------
+
+The example above gives the same result as this:
+---------------------
+p {
+  border-style: dotted solid;
+}
+---------------------
+
+
+
+For more do visit w3shools.

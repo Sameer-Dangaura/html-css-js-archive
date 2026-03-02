@@ -1,0 +1,64 @@
+<!-- 
+# If you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets),
+ - Another way is to change the percentage of the flex property of the flex items to create different layouts for different screen sizes. Note that we also have to include flex-wrap: wrap; on the flex container for this example to work: 
+ 
+
+I did it in my own way. For w3schools way, you can visit w3schools.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            display: flex;  /* making div.flex-container as flex container to achieve flexbox layout. */
+
+            background-color: #f1f1f1;
+            
+            flex-wrap: wrap;    /* This flex-wrap to wrap is necessary to work this method */
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            border: 3px solid black;
+            background-color: dodgerblue;
+            padding: 20px;
+
+            /*Removed margin: 20px; because it was making trouble to align 2nd div in horizontal aligning. And note that there is no relation between the  box-sizing: border-box; and margin.*/
+
+            text-align: center;
+
+            flex: 50%;  /* flex shorthand property having the flex-basis: 50% i.e. the initilization of the length of flex items */
+
+            /* max-width: 50%; */
+        }
+
+        /* Responsive layout -  makes a one column-layout instead of a two-column layout */
+        @media screen and (max-width: 800px){
+            .flex-container > div{
+                flex: 100%; /* flex shorthand property having the flex-basis: 100% i.e. the initilization of the length of flex items */
+                /* max-width: 100%; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Flexbox</h1>
+    <p>Resize the browser window to see that the direction changes when the screen size is 800px wide or smaller.
+    </p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+</html>

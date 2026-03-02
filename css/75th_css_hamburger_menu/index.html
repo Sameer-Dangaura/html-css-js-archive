@@ -1,0 +1,106 @@
+<!-- Creating hamburger menu by myself without using js :  
+ 
+This is not completed !yet. I think, I need js for that. There is another way also using checkbox but, I don't think it is useful. 
+So, I will complete it using js. 
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* style the .hamburger-menu, .close-menu */
+        .hamburger-menu, .close-menu{
+            color: #333;
+            margin: 0 0 0 10px;   /* set gap from top. And set gap from left: 10px of window viewport to make align icons vertically same line with '.navigation-links ul li a' and that's why we used there padding left: 10px. */
+            border: 1px solid black;
+            border-radius: 1px;
+            padding-top: 9px; /* since, the icon is more nearer to bottom border so I gave padding-top to make look good. */
+        }
+
+        /* set position of '.hamburger-menu' to absolute to remove from the normal flow and then '.hamburger-menu' and 'navigatin links container' will be positioned at same location. After that we gonna control whom to display:block and display:none. */
+        .hamburger-menu{
+            position: absolute; 
+        }
+
+        /* style ul list */
+        .navigation-links ul{
+            list-style-type: none;
+            color: #333;
+        }
+
+        /* style the links of ul list  */
+        .navigation-links ul li a{
+            display: block; /* since <a> is inline element so making it block type which makes hole area clickable and allows to manipulate it's padding, margin and so on. */
+            text-decoration: none;
+            color: #333;
+            font-size: 19px;
+            padding: 12px 0 12px 10px;  /* since, the margin left 10px is used with '.hamburger-menu', '.close-menu' to make align icons vertically same line with '.navigation-links ul li a' and that's why we used here padding left: 10px. And the padding top and down is used to look better links. */
+            border-bottom: 1px solid black;
+        }
+
+        /* default style of the .navigation-links */
+        .navigation-links{
+            display: none;
+            background-color: #f1f1f1;
+            width: 130px;
+            padding-top: 10px;
+            box-shadow: 0 0 5px black;
+            position: absolute; /* to remove from normal flow. */
+        }
+
+        /* change the background color while hovering */
+        .hamburger-menu:hover{
+            background-color: #333;
+            color: white;
+        }
+
+        /* change the background color while hovering */
+        .close-menu:hover{
+            background-color: #333;
+            color: white;
+        }
+
+        /* change the background color while hovering */
+        .navigation-links ul li a:hover{
+            background-color: #333;
+            color: white;
+        }
+
+        /* '.navigation-links' which are Subsequent-sibling of '.hamburger-menu' are displayed when the '.hamburger-menu' is active i.e. clicked(hold) */ 
+        .hamburger-menu:active ~ .navigation-links{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- a hamburger menu: -->
+        <a href="#" class="hamburger-menu">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <!-- a navigatin links container for mobile(or small screen): -->
+        <div class="navigation-links">
+            <a href="#" class="close-menu">
+                <i class="material-icons">close</i>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

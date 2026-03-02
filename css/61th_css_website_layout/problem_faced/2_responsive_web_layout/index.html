@@ -1,0 +1,210 @@
+<!-- A responsive website layout using float property: -->
+
+<!--
+Proble-2: The problem is also captured and highlighted with red marker in "problem_captured_with_red.png"
+OR, 
+The problem is there is the background color which is white of 'main article section' and 'main aside section' are mixed with each other or there is no gap. 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* styling body */
+        body{
+            background-color: #f1f1f1;
+        }
+
+        /* setting bg color of header, and so on */
+        header, main article section, main aside section{
+            background-color: white;
+        }
+
+        /* aligning center the title of header */
+        header h1{
+            text-align: center;
+        }
+
+        /* aligning center the paragraph of header */
+        header p{
+           text-align: center;
+        }
+
+        /* styling the header */
+        header{
+            margin: 8px 0px;
+            padding: 12px 0px;
+        }
+
+        /* style the top navigation bar */
+        nav{
+            margin: 20px 0px;
+        }
+
+        /* style the top navigation bar */
+        nav ul{
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #333;
+            padding: 0px;
+        }
+        nav ul li{
+            float: left;
+        }
+
+        /* style the top nav links */
+        nav ul li a{
+            text-decoration: none;
+            display: block; 
+            color: white;
+            padding: 14px 16px;
+        }
+
+        /* change color on hover */
+        nav ul li a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* create two unequal columns that float next to each other. */
+        /* left column */
+        main article{
+            width: 75%;
+            float: left;
+        }
+
+        /* right column */
+        main aside{
+            width: 25%;
+            float: left;
+        }
+
+        /* style the article section image container */
+        main article section div.img-container{
+            padding: 10px; 
+        }
+
+        /* style the image which is inside the article section image container */
+        main article section div.img-container img{
+            width: 100%;
+        }
+
+        /* style the aside section image container */
+        main aside section div.img-container{
+            padding: 10px;
+        }
+
+        /* style the image which is inside the aside section image container */
+        main aside section div.img-container img{
+            width: 100%;
+        }
+
+        /* clearing float after the main container */
+        main::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* styling the footer */
+        footer{
+            text-align: center;
+            background-color: #ddd;
+            padding: 25px 8px;
+            font-size: 21px;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 900px){
+            main article, main aside{
+                width: 100%;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 450px){
+            nav ul li{
+                float: none;
+                width: 100%;
+            }
+            nav ul li a{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <p>Resize the browser to see the effect.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li style="float:right"><a href="#">Link</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <section>
+                <h2>TITLE HEADING</h2>
+                <p>Title description, Jan 1, 2025 </p>
+                <div class="img-container">
+                    <img src="../../img/arbitrary_img.png" alt="blank image">
+                </div>
+                <p>Some text...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, nemo.</p>
+            </section>
+    
+            <section>
+                <h2>TITLE HEADING</h2>
+                <p>Title description, Jan 1, 2025 </p>
+                <div class="img-container">
+                    <img src="../../img/arbitrary_img.png" alt="blank image">
+                </div>
+                <p>Some text...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, nemo.</p>
+            </section>    
+        </article>  
+
+        <aside>
+            <section id="about-me">
+                <h2>About Me</h2>
+                <div class="img-container">
+                    <img src="../../img/arbitrary_img.png" alt="blank image">
+                </div>
+                <p>Some text about me Lorem ipsum dolor sit amet.</p>
+            </section>
+    
+            <section id="popular-post">
+                <h2>Popular Post</h2>
+                <div class="img-container">
+                    <img src="../../img/arbitrary_img.png" alt="blank image">
+                </div>
+                <div class="img-container">
+                    <img src="../../img/arbitrary_img.png" alt="blank image">
+                </div>
+                <div class="img-container">
+                    <img src="../../img/arbitrary_img.png" alt="blank image">
+                </div>
+            </section>
+    
+            <section id="follow-me">
+                <h2>Follow Me</h2>
+                <p>Some text...</p>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

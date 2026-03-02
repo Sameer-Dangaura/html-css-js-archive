@@ -1,0 +1,204 @@
+<!-- Create a full-height, "sticky" side navigation: -->
+
+<!-- we have used:
+-> internal css = inside the head. 
+
+
+________________________________________________________
+# Tip: While working with   'position'  property make sure you know about their flow types. For that do visit "42th_css_position/flow_of_positioned_element"...
+_________________________________________________________
+
+
+
+> Responsive side nav bar:
+---------------------------
+:
+Responsive Sidenav
+How to use CSS media queries to create a responsive side navigation.
+=>
+Answer is:
+
+* For (max-width: 900px)
+-> overwrite the position property from fixed to relative. To take back the normal flow of 'ul' list.
+-> overwrite the width property from 20% to 100%.
+-> then float the 'li a'.
+-> And remove the left-margin of div.content.
+
+* For (max-width: 400px)
+->just remove the float.
+
+
+----------------------------------------------------------
+Tip:
+-> for understanding about how responsiveness work, do scroll to last.
+----------------------------------------------------------
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;    /* Removing default margin of body.
+            because of the absence of  this,  took a lot of time of mine for removing the top margin gap. */
+        }
+        ul {        
+            list-style-type: none;  
+            padding: 0px;   
+            margin: 0px;    
+            width: 20%;    /* set to 20% width */
+            background-color: #f1f1f1;
+            position: fixed;    /* set to fixed 'ul' list */
+            height: 100%;
+            overflow: auto; /* Similar to scroll, but it adds scrollbars only when necessary */
+        }
+        ul li a{
+            display: block; 
+            text-decoration: none;
+            padding: 8px 16px;
+            color: #000;
+        }
+        ul li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        div.content {
+            margin-left: 20%;
+            padding: 1px 16px; 
+            border: 1px solid #f1f1f1;
+        }
+        @media screen and (max-width: 900px){
+            ul {
+                position: relative; /* overwrite the position property from fixed to relative. To take back normal flow of 'ul' element. */
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+            }
+            ul a{
+                float: left;
+                padding: 14px 16px;
+            }
+            div.content{
+                border: 1px solid #f1f1f1;
+                margin-left: 0px;   /* remove the left margin. */
+            }
+        }
+        @media screen and (max-width: 400px){
+            ul li a{
+                float: none;    /* remove the float */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contactus">Contact us</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    
+    <div class="content">
+
+        <h1>Vertical nav bar</h1>
+
+        <h2>Responsive Sidenav Example</h2>
+
+        <p><b>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</b></p>
+
+        <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+
+        <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+
+        <p style="background-color: yellow;"><b>Resize the browser window to see the effect.</b></p>
+
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+        <p>Some text...</p>        
+
+
+    </div>
+</body>
+</html>
+
+
+<!--
+
+Q. while working with responsive how does it works. 
+Let's assume: 
+1)there is one default style having width: 20% of <ul> element for side nav bar, 
+2)second one is for responsive having max-width: 900px having style width: 100% of <ul> element with 'ul li a' style float: left; and 
+3)the third one is also for responsive having max-width: 400px having style float: none of 'ul li a'. 
+Then how the style gonna work, does it will apply width: 20% or 100%. How and why ? 
+
+Ans:
+----
+
+Behavior Explanation:
+
+When viewport width > 900px:
+- Only the default styles apply.
+    - <ul> has width: 20%.
+    - No float rules from media queries apply because the conditions are not met.
+
+
+When 900px ≥ viewport width > 400px:
+- The media query for max-width: 900px is triggered.
+    - <ul> gets width: 100% (overriding the default style).
+    - ul li a elements have float: left.
+
+
+When viewport width ≤ 400px:
+- Both media queries are triggered (max-width: 900px and max-width: 400px).
+    - <ul> remains width: 100% from the max-width: 900px rule.
+    - For ul li a, float: none from the max-width: 400px rule overrides float: left from the max-width: 900px rule.
+
+
+-->

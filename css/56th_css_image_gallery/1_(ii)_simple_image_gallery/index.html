@@ -1,0 +1,109 @@
+<!-- A simple image gallery which are clickable: -->
+
+<!--
+# Here, we gonna complete the remaining styles like:
+-> set style while hovering over images
+-> and so on...
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.gallery{
+            margin: 5px;
+            border: 1px solid black;
+            width: 180px;
+            float: left;
+        }
+         div.gallery img{
+            width: 100%;    /* since, the div.gallery width is 180px so the img which is inside div.gallery will cover width 100% (i.e. 180px) of div.gallery. */
+            height: 100px;  /* since, the div.gallery's height was not initialized so the 'div.gallery img' + '.describe' will set  height of div.gallery. */
+         }
+         div.gallery:hover {
+            box-shadow: 3px 3px 5px 0px black;
+         }
+         div.gallery .describe{
+            padding: 12px 14px;
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <h1>A simple Image gallery:</h1>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img1.png">  <!--making clickable image-->
+            <img src="../img/img1.png" alt="img1" style="width: 600; height: 400;">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img2.png">  <!--making clickable image-->
+            <img src="../img/img2.png" alt="img2" style="width: 600; height: 400;">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img3.png">  <!--making clickable image-->
+            <img src="../img/img3.png" alt="img3" style="width: 600; height: 400;">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img4.png">  <!--making clickable image-->
+            <img src="../img/img4.png" alt="img4" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img5.png">  <!--making clickable image-->
+            <img src="../img/img5.png" alt="img5" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img6.png">  <!--making clickable image-->
+            <img src="../img/img6.png" alt="img6" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img7.png">  <!--making clickable image-->
+            <img src="../img/img7.png" alt="img7" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img8.png">  <!--making clickable image-->
+            <img src="../img/img8.png" alt="img8" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img9.png">  <!--making clickable image-->
+            <img src="../img/img9.png" alt="img9" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../img/img10.png">  <!--making clickable image-->
+            <img src="../img/img10.png" alt="img10" width="600" height="400">
+        </a>
+        <div class="describe">Add a description of the image here </div>
+    </div>
+</body>
+</html>

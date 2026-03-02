@@ -1,0 +1,30 @@
+<!-- Another way to center an image horizontally on a page is to use display: flex. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;  /* since <div> is block, so we are changing it to flex that means we are making it as flex container. Where flex container contain its child as flex items. */
+
+            justify-content: center;    /* centers the image horizontally in the div container */
+
+            border: 1px solid black;
+        }
+        div img{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Centering image horizontally</h1>
+    <div>
+        <img src="../img/img2.png" alt="house image"> 
+    </div>
+</body>
+</html>

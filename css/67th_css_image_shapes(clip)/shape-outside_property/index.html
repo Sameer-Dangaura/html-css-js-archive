@@ -1,0 +1,40 @@
+<!-- The   shape-outside   property lets you define a shape for the wrapping of the inline content(in our example <img> is inline content).
+ 
+Here, we gonna wrap the img which is clipped with circle:
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 3px solid black;
+            padding: 12px;
+        }
+        img{
+            float: left;
+            clip-path: circle(30%);
+            shape-outside: circle(35%);
+        }
+
+        /* to prevent overflow of img from div container, we use clearfix hack */
+        div::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shape-outside and the circle() Function</h1>
+    <div>
+        <img src="../img/img6.png" alt="image" style="width: 400px; height: 200px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, non quia aliquam temporibus repudiandae doloribus quibusdam quis illum laboriosam delectus possimus optio, labore quae dolores odit asperiores quod voluptatum quidem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti ratione cumque quo facilis, labore, libero, tempore voluptatibus recusandae maxime ipsa rem asperiores aspernatur modi ducimus iusto! Iure asperiores voluptates alias sed blanditiis fuga, inventore reprehenderit, labore praesentium, nemo ipsam deleniti eveniet. Debitis ab deleniti quibusdam sunt eligendi, laboriosam architecto iusto!</p>
+    </div>
+</body>
+</html>

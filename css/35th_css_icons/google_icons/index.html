@@ -1,0 +1,76 @@
+<!-- Here, we gonna use google icons: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    
+    <!-- <i class="matrial-icons"> icon_name </i>
+                OR,
+    <span class="matrial-icons"> icon_name </span> 
+    
+    is syntax to use google icons.        -->
+
+    <i class="material-icons">cloud</i>    
+    <i class="material-icons">computer</i>    
+    <i class="material-icons">attachment</i>    
+    <i class="material-icons">favorite</i>    
+    <i class="material-icons">thumb_up</i>    
+    <i class="material-icons">share</i>    
+    <i class="material-icons">sync</i>    
+
+    <p>Styled google icons (size and color):</p>
+    <i class="material-icons" style="color:red; font-size: 30px;">favorite</i>    
+    <i class="material-icons" style="font-size: 50px; color:blue;">thumb_up</i>    
+    <i class="material-icons" style="color: skyblue;">share</i>    
+    <i class="material-icons">sync</i>   
+
+</body>
+</html>
+
+
+
+<!--
+
+Q. While using google icons, is it necessary to use class="matrial-icons" ?
+
+Ans:
+---
+
+Yes, using class="material-icons" is necessary when including Material Icons in your HTML as per Google's Material Icons framework. Here's why:
+
+
+1. Why class="material-icons" is Required
+=>
+The material-icons class:
+
+* Activates the Material Icons font:
+When you load the Material Icons font via the <link> tag:
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+The font is included in your webpage, but the browser doesn’t know where to apply it unless you use the class="material-icons".
+
+
+* Tells the browser to treat the text as an icon:
+Inside an <i> tag with the class="material-icons", the browser treats the text (e.g., cloud, favorite) as the name of an icon rather than regular text.
+This text is mapped to the corresponding icon in the Material Icons font.
+
+
+2. What Happens Without class="material-icons"?
+=>
+If you remove the class="material-icons" from the <i> tag:
+
+The text inside the <i> tag (e.g., cloud, favorite) will be rendered as plain text, not as an icon.
+The Material Icons font won't be applied.
+
+
+
+-->

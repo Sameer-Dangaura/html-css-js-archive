@@ -1,0 +1,33 @@
+For this , do visit w3shcools.
+
+
+-----------------------------------------------------------------------------------
+> Opacity / Transparency
+------------------------
+:
+The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:
+
+example:
+div {
+  background-color: green;
+  opacity: 0.3;
+}
+
+
+---------------------------------------------------------------------------------
+Note:
+ When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read.
+---------------------------------------------------------------------------------
+
+
+
+> Transparency using RGBA
+-------------------------
+:
+If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text:
+
+example:
+div {
+  background: rgba(0, 128, 0, 0.3) /* Green background with 30% opacity */
+}
+

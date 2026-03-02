@@ -1,0 +1,69 @@
+<!-- Example for text in transparent box: -->
+
+<!-- Here, I learned two things for styling while working with parent container and child container. For this do scroll to last. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .backgroundbox{
+            background: url('../img/sea_mirror.png') repeat;
+            border: 3px solid black;/* Border is necessary to make work of child's margin top and bottom. */
+
+            /* Here, I removed:
+            height: 200px;  
+            
+            Because when I set height: 200px; it was making mess between two div bottom borders (i.e. one is parent div and another is child div) while minimizing the screen. */
+        }
+        .transbox{
+            border: 3px solid black;    
+            background-color: #f1f1f1;
+            opacity: 0.5;
+            margin: 20px;
+        }
+        .transbox p{
+            font-weight: bold;
+            margin: 3%;
+            font-size: 23px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="backgroundbox">
+
+        <div class="transbox">
+
+            <p>This is some text that is placed in the transparent box.</p>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+<!--
+From this what I have learned is that:
+
+1) Border is necessary to make work of child's margin top and bottom.
+
+2) Height:
+    Donot set height for only one container, if there is parent container and child container.
+    Because it makes mess while minimizing or maximizing the window.
+
+    e.g: Let, you set the height of parent container to 200px; and you do not set the height of child container. Then it will make mess while minimizing the window.
+    
+    So the solution is: 
+
+    (1)Either, Do not set anyone's height.
+
+    (2)OR, set height for both container.
+    
+
+-->

@@ -1,0 +1,111 @@
+<!--
+creating a responsive website, containing a flexible navigation bar and flexible content: 
+
+
+Tip: 
+ The <aside> content is often placed as a sidebar in a document.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sameer's website</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!--an arbitrary container-->
+    <div id="arbitrary-container">
+        Resize the browser window to see the responsive effect.
+    </div>
+
+    <!--header-->
+    <header>
+        <h1>My Website</h1>
+        <p>With a <b>flexible</b> layout.</p>
+    </header>
+
+    <!--nav bar-->
+    <nav>
+        <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </nav>
+
+    <!-- main content -->
+    <main>
+
+        <!-- sidebar -->
+        <aside>
+            <section id=about-me">
+                <h3>About Me</h3>
+                <p>Photo of me:</p>
+
+                <!-- a fake image using div container: -->
+                <div class="fake-img" style="height: 200px;">
+                    Image
+                </div>
+            
+                <p>Some text about me Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, laboriosam?</p>
+            </section>
+
+            <section id="more-about-me">
+                <h3>More Text</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, modi.</p>
+
+                <!-- fake images using div container: -->
+                <div class="fake-img">
+                    Image
+                </div>
+                <div class="fake-img">
+                    Image
+                </div>
+                <div class="fake-img">
+                    Image
+                </div>
+            </section>
+        </aside>
+
+        <!-- article -->
+        <article>
+            <section>
+                <h2>TITLE HEADING</h2>
+                <p>Title description, Dec 7, 2024</p>
+
+                <!-- a fake image using div container: -->
+                <div class="fake-img" style="height: 200px;">
+                    Image
+                </div>
+
+                <p>Some text...</p>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis nobis aspernatur ratione expedita? Voluptates libero est odio, perferendis officia accusantium, numquam, obcaecati assumenda dolores veritatis aliquam corporis molestiae! Aliquam optio aliquid commodi error provident repudiandae accusamus cumque. Necessitatibus, veniam provident.</p>
+            </section>
+
+            <section>
+                <h2>TITLE HEADING</h2>
+                <p>Title description, Sep 2, 2024</p>
+
+                <!-- a fake image using div container: -->
+                <div class="fake-img" style="height: 200px;">
+                    Image
+                </div>
+
+                <p>Some text...</p>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut laudantium nulla, animi labore quo ratione culpa odit dolorum! Ab veritatis ad et eveniet unde magnam similique perferendis blanditiis magni tempore dignissimos placeat voluptatem esse nisi, iusto voluptate. Tenetur, ratione? Obcaecati aperiam sapiente itaque error quidem!</p>
+            </section>
+        </article>
+    </main>
+
+    <!-- footer  -->
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!-- 
+Using  justify-content: center  is also done in "49th_css_align/center_using_flexbox" and "66th_css_image_centering".
+
+Example using justify-content: center 
+ 
+The center value positions the flex items in the center of the container:
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling div.flex-container */
+        .flex-container{
+            display: flex;  /* making div.flex-container as flex container */
+
+            justify-content: center;    /* center value positions the flex items in the center of the container */
+
+            background-color: blue;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The justify-content property</h1>
+    <p>justify-content: center; aligns the flex items at the center of the container:</p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

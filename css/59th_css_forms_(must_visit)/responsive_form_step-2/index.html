@@ -1,0 +1,107 @@
+<!-- Responsive Form: 
+- When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other. 
+
+
+STEP-2: Align col-25 and col-75 side by side of each row.
+
+
+
+# When you render this document in browser, you will see the bulk of border line collected at the top of the form. This is because of float property. Do not get frightened or tension, this is normal behaviour for float property. That's why in modern industry flexbox and grid is used instead of float. 
+sol:
+That's why I again tried to solve this problem and I used the clearfix hack and now the problem is solved.
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .row{
+            width: 100%;
+            border: 1px solid red;
+        }
+        .col-25{
+            border: 1px solid rgb(6, 247, 255);
+            width: 25%;
+            float: left;
+        }
+        .col-75{
+            border: 1px solid blue;
+            width: 75%;
+            float: left;
+        }
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Form</h1>
+    <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+    <div class="form-container">
+        <form action="/action_page.php">
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Select your country</label>
+                </div>
+
+                <div class="col-75">
+                    <select name="country" id="country">
+                        <option value="nepal">Nepal</option>
+                        <option value="india">India</option>
+                        <option value="america">America</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+
+                <div class="col-75">
+                    <textarea name="subject" id="subject" placeholder="Write something..." style="height: 200px;"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

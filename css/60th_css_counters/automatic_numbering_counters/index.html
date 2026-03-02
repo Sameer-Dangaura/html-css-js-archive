@@ -1,0 +1,35 @@
+<!-- CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used). -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: section; /* Here 'section' is like a variable to count. It is not totally a variable programatically. It is just for used to counting which is just initialized to 0.
+            Creates or resets a counter. 
+            Creates a counter for the page (in the body selector)*/
+        }
+        h2::before{
+            counter-increment: section; /* increments the counter value for each <h2> element. */
+
+            content: counter(section) ": "; /*  Inserts generated content before each h2 element. */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Using CSS counters to count - how many times h2 is used.</h1>
+
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>JavaScript</h2>
+    <h2>Python</h2>
+    <h2>SQL</h2>
+
+</body>
+</html>

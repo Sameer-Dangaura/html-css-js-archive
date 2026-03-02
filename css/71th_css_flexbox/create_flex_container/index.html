@@ -1,0 +1,48 @@
+<!-- To start using CSS Flexbox, you need to first define a flex container.
+
+The flex container becomes flexible by setting the display property to flex.
+
+The element when you render a browser represents a flex container (the blue area) with three flex items. -->
+
+
+<!--
+Comparison to previous methods like float to make flexible by controlling the width of child item, the flexbox layout is so easy and simple. We have to just set the display to flex of flex-container to make flexible and then their child acts as flexible items.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;  /* making div.flex-container as flex container */
+            background-color: blue;
+            padding: 20px 8px;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a Flex Container</h1>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>A Flexible Layout must have a parent element with the display property set to flex.</p>
+
+    <p style="background-color: yellow;">Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+</body>
+</html>

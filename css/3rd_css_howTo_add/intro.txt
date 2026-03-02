@@ -1,0 +1,8 @@
+For this, do visit w3schools.
+
+
+--------------------------------------------------------------------------------------
+Tip:
+ An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.
+---------------------------------------------------------------------------------------
+

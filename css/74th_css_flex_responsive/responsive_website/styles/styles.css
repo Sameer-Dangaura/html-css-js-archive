@@ -1,0 +1,116 @@
+/* a style sheet for "responsive_website/index.html" : */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;    /* Removing default margin of body. */
+}
+
+/* styling arbitrary container which is top of header */
+#arbitrary-container{
+    background-color: yellow;
+    text-align: center;
+
+    line-height: 70px;  /* here, we didnot give the height for arbitrary container instead of that we used line-height to give height of arbitrary container. */
+
+    font-size: 17px;
+}
+
+/* styling the header */
+header{
+    padding: 60px 0;    /* here, we didnot give the height for header container instead of that we used padding of top and bottom to give height of header container. It control height indirectly. */
+    background-color: #1abc9c;
+    text-align: center;
+    color: white;
+}
+
+/* styling navigation bar: */
+/* giving background color of navigation bar */
+nav{
+    background-color: #333;
+}
+
+/* style the unorder list of navigation bar */
+nav ul {
+    list-style-type: none;
+    display: flex;  /* making ul as a 'flexible container', to contain flex items. */
+
+    flex-direction: row;    /* Explictly giving the direction of the flex items to row even though it is default value. */
+
+    margin: 0px;    /* remove the default margin of ul */
+    padding: 0px;   /* remove the default padding of ul */
+}
+
+/* style the navigation bar links */
+nav ul li a{
+    display: block; /* Since, <a> is inline element. So display: block;  
+
+    Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want) */
+
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px; /* Specify some padding between each <a> element, to make them look good */
+}
+
+/* change the color on hover */
+nav ul li a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* main container */
+main{
+    display: flex;  /* making main container as flex container to achieve flexbox layout. */
+    flex-wrap: wrap;    /* main container gonna wrap the content/items if the items will overflow */
+}
+
+/* Create two unequal columns that sits next to each other: */
+/* sidebar/left column */
+main aside{
+    flex: 30%;  /* flex shorthand property having the value of flex-basis: 25% */
+    padding-right: 5px; /* We gave padding for right to get space between the aside and article (which is not actual the space it is just an illusion for space which is geted by the background color of main container). */
+    box-sizing: border-box; /* I'm using this individually for that container only where it's usage is needed. Instead of using individually, we can use for all i.e. by using *{box-sizing: border-box;}. */
+}
+
+/* main column */
+main article{
+    flex: 70%;  /* flex shorthand property having the value of flex-basis: 25% */
+    padding-left: 5px;  /* We gave padding for left to get space between the aside and article (which is not actual the space it is just an illusion for space which is geted by the background color of main container). */
+    box-sizing: border-box; /* I'm using this individually for that container only where it's usage is needed. Instead of using individually, we can use for all i.e. by using *{box-sizing: border-box;}. */
+}
+
+/* set background color of sections */
+main section{
+    background-color: #f1f1f1;
+    padding: 0 8px; /* why we used this? For that go to .fake-img's style section "margin: 10px" part. */
+}
+
+/* styling fake image */
+.fake-img{
+    width: 100%;    /* setting the width 100% of their parent containers. */
+    background-color: #aaa;
+    padding: 20px;
+    box-sizing: border-box; /* I'm using this individually for that container only where it's usage is needed. Instead of using individually, we can use for all i.e. by using *{box-sizing: border-box;}. */
+
+    /*margin: 10px; Here margin is not needed to give because of this the .fake-img container is getting overflow from aside and from article to left side. So, instead of using this I used padding to left and right 8px of section's container which are parent container for .fake-img . Which sets the .fake-img container, looks inside of section container. */
+
+    margin-bottom: 4px; /* margin-bottom for set gap between the .fake-img container. */
+}
+
+/* style the footer */
+footer{
+    text-align: center;
+    font-size: 30px;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px){
+    nav ul, main{
+        flex-direction: column;
+    }
+
+    nav ul li a{
+        text-align: center;
+    }
+}

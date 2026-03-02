@@ -1,0 +1,71 @@
+<!-- Creating horizontal navigation links:  
+using  display: inline-block; -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        nav {
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+        nav ul{
+            /* style-1: to align nav link totally left: */
+            width: 455px;
+            margin: 0px;    /* to remove by default margin. */
+            padding: 0px;   /* to remove by default padding. */
+            /* left: 0px;   /* this is not needed to align nav link left ,since  margin: 0px;  and  padding: 0px; are enough to handle this.  */
+
+
+
+
+            /* 
+            style-2: to align center nav link horizontally: 
+
+            width: 455px;
+            margin: auto;   /* to align center where width also plays imp. role. */
+
+        }
+        li {
+            display: inline-block;  
+            list-style-type: none;
+            border: 2px solid whitesmoke;
+            background-color: yellow;
+            width: 100px;
+            height: 35px;
+        }
+        li a{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 6px 0px 0px;   /* padding: top left/right bottom; */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Horizontal Navigation Links</h1>
+
+    <p>By default, list items are displayed vertically. In this example we use display: inline-block to display them horizontally (side by side).</p>
+
+    <p>Note: If you resize the browser window, the links will automatically break when it becomes too crowded.</p>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contactus">Contact us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

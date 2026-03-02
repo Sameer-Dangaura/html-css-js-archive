@@ -1,0 +1,45 @@
+<!-- Example using flex-basis property: 
+ 
+The flex-basis property is used in inline css.
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling 'div.flex-container' */
+        .flex-container{
+            display: flex; /* making the 'div.flex-container' as flex container */
+
+            background-color: blue;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>The flex-basis property</h1>
+    <p>Set the initial length of the third flex item to 200 pixels:</p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

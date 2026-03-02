@@ -1,0 +1,27 @@
+<!-- # Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.relative{
+            position: relative;
+            border: 3px solid green;
+            left: 30px; /* Here, this style gonna applied with relatively positioned div element. This sets the gap between left side of window and div to 30px;*/
+        }
+    </style>
+</head>
+<body>
+    <h2>position: relative;</h2>
+    <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+
+    <div class="relative">
+        <p>This div element is position: relative;</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- Example using align-content: stretch -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling 'div.flex-container' */
+        .flex-container{
+            display: flex; /* making the 'div.flex-container' as flex container */
+
+            background-color: blue;
+
+            height: 600px;  /* we use a 600 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property. */
+
+            align-content: stretch;  /* the flex lines stretch to take up the remaining space of the container (this is default) */
+
+            flex-wrap: wrap;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>The align-content Property</h1>
+    <p>align-content: stretch; - The flex lines stretch to take up the remaining space of the container (this is default):</p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+</body>
+</html>

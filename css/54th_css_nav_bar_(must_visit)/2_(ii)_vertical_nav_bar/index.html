@@ -1,0 +1,42 @@
+<!-- 2-(ii) : Vertical bar:
+set:
+-> width alternate:
+    You can also set the width of <ul>, and remove the width of <a>, as they will take up the full width available when displayed as block elements. This will produce the same result as our previous example: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {        
+            list-style-type: none;  /* Removes the bullets. A navigation bar does not need list markers */
+            padding: 0px;   /*  to remove browser default padding. */
+            margin: 0px;    /*  to remove browser default margin. */
+
+            width: 90px;    /* will take up the full width available when displayed as block elements. */
+        }
+        li a{
+            display: block; /* Since, <a> is inline element. So display: block;  
+
+            Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want) */
+            
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vertical nav bar</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contactus">Contact us</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <p>Notice that the whole link area is clickable, not just the text.</p>
+</body>
+</html>

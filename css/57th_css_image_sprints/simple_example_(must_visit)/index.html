@@ -1,0 +1,90 @@
+<!-- Instead of using three separate images, we use this single image ("img_sprites.png"):
+
+With CSS, we can show just the part of the image we need.
+
+In the following example the CSS specifies which part of the "img_sprites.png" image to show. -->
+
+
+<!--
+----------------------------------------------------------
+# Let me explain you about -ve and +ve value in background-position:
+
+-> background-position: (left/right) (top/down) ;
+
+e.g: background-position: -50px     -10px;
+means:                      |          |
+                            |          |
+                            |          |
+                (In X-coordinate)      |
+                background-img is      |
+                shifted 50px left.     |
+            [-ve value moves img left. |
+            While +ve value move it    |
+            to right.]                 |
+                                       |
+                                (In Y-coordinate)
+                                background-img is 
+                                shifted 10px up.
+                                [-ve value moves img up.
+                                While +ve value move it
+                                to down.]
+                                
+Note:
+ Do not misunderstood that the container is moving to cover or hold that background-image in it's fixed height/width container. 
+ - Instead of container, the background image moves to get covered or hold by that fixed widht/height container.
+----------------------------------------------------------
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img-list{
+            list-style-type: none;
+        }
+        #fb{
+            display: inline-block;
+            border: 1px solid black;
+            width: 70px;
+            height: 60px;
+            background: url('../img/img_sprits.png') -54px -59px;
+        }
+        #in{
+            display: inline-block;
+            border: 1px solid black;
+            width: 70px;
+            height: 60px;
+            background: url('../img/img_sprits.png') -205px -59px;
+        }
+        #tweeter{
+            display: inline-block;
+            border: 1px solid black;
+            width: 70px;
+            height: 60px;
+            background: url('../img/img_sprits.png') -505px -59px;
+        }
+        #fb a, #in a, #tweeter a{
+            display: block; /* making whole area clickable. */
+            border: 1px solid red;  /* you can remove border. */
+            height: 100%;   /* height is necessary to set the vertically block. */
+        }
+    </style>
+</head>
+<body>
+    <h1>You will see these type of icons or images in footer</h1>
+    <ul id="img-list">
+
+        <li id="fb"><a target="_blank" href="#"></a></li><!--In this you add link of website owner's fb profile.-->
+
+        <li id="in"><a target="_blank" href="#"></a></li><!--In this you add link of website owner's linked-in profile.-->
+
+        <li id="tweeter"><a target="_blank" href="#"></a></li><!--In this you add link of website owner's tweeter profile.-->
+
+    </ul>
+</body>
+</html>

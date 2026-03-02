@@ -1,0 +1,44 @@
+<!-- CSS Box Shadow example-1 by me: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h1{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0px 0px 25px blue, 0px 0px 5px darkblue;
+            /* to understand about this text shadow, you can visit "28th_css_text_shadow/text_shadow-5". */
+        }
+
+        /* box styling */
+        .box{
+            border: 1px solid #f1f1f1;
+            padding: 12px 10px;
+            height: 23px;
+            width: 120px;
+            margin: auto; 
+            text-align: center;
+        }
+
+        /* giving box shadow while hovering */
+        .box:hover{
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px rgba(35, 173, 278, 1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Shadow</h1>
+
+    <div class="box">
+        Hover me
+    </div>
+    
+</body>
+</html>

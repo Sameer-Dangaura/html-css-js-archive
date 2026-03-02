@@ -1,0 +1,51 @@
+<!-- 
+# If you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets),
+ - you can change the flex-direction from row to column at a specific breakpoint (800px in the example below): 
+ 
+
+I did it in my own way. For w3schools way, you can visit w3schools.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;  /* making div.flex-container as flex container to achieve flexbox layout. */
+
+            background-color: dodgerblue;
+            flex-direction: row;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            flex: 50%;  /* flex shorthand property having the flex-basis: 50% i.e. the initilization of the length of flex items */
+        }
+
+        /* Responsive layout - make a one column-layout instead of two-column layout */
+        @media screen and (max-width: 800px){
+            .flex-container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Flexbox</h1>
+    <p>Resize the browser window to see that the direction changes when the screen size is 800px wide or smaller.
+    </p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+</html>

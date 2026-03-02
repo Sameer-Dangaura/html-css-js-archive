@@ -1,0 +1,43 @@
+<!-- Creating a table which will span only half of page: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 50%; /* making table only half of page  */
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;  /* to avoid double border in table  */
+        }
+    </style>
+</head>
+<body>
+    <h1>Table spanning only half of page</h1>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td>Chaudhary</td>
+        </tr>
+        <tr>
+            <td>Hari</td>
+            <td>Chaudhary</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!-- Example to understand the difference between align-items and align-content property by me: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling the sections */
+        section{
+            border: 0.5px solid black;
+            background-color: #f1f1f1;
+            margin: 5px 0px;
+        }
+
+        /* styling 'div.flex-container-1' */
+        .flex-container-1{
+            display: flex; /* making the 'div.flex-container-1' as flex container */
+
+            background-color: blue;
+
+            height: 600px;  /* we use a 600 pixels high container, to better demonstrate the align-items property. */
+
+            align-items: center;    /* aligns the flex items middle of the container vertically */
+
+            flex-wrap: wrap;
+        }
+
+        /* styling those div which are direct child of div.flex-container-1 */
+        .flex-container-1 > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+        }
+
+        /* styling 'div.flex-container-2' */
+        .flex-container-2{
+            display: flex; /* making the 'div.flex-container-1' as flex container */
+
+            background-color: blue;
+
+            height: 600px;  /* we use a 600 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property. */
+
+            align-content: center;  /* - The flex lines are packed toward the center of the container: */
+
+            flex-wrap: wrap;
+        }
+
+        /* styling those div which are direct child of div.flex-container-2 */
+        .flex-container-2 > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understand difference between align-items and align-content property</h1>
+
+    <p style="background-color: yellow;">Try to resize the window viewport.</p>
+
+    <section class="align-items">
+        <h2>The align-items property</h2>
+        <p>align-items: center; aligns the flex items middle of the container vertically:</p>
+
+        <div class="flex-container-1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+    </section>
+
+    <section class="align-content">
+        <h2>The align-content property</h2>
+        <p>align-content: center; - The flex lines are packed toward the center of the container:</p>
+
+        <div class="flex-container-2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+    </section>
+</body>
+</html>

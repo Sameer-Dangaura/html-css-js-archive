@@ -1,0 +1,59 @@
+<!-- 
+Example using flex-shrink property:  
+ 
+The flex-shrink property is seted in inline css.
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling 'div.flex-container' */
+        .flex-container{
+            display: flex; /* making the 'div.flex-container' as flex container */
+
+            background-color: blue;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f1f1f1;
+            font-size: 25px;
+            text-align: center;
+            width: 100px;   /* width is necessary to make work of flex-shrink property. */
+        }
+    </style>
+</head>
+<body>
+    <h1>The flex-shrink property</h1>
+    <p>Do not let the third flex item shrink as much as the other flex items:</p>
+
+    <div class="flex-container">
+        <div style="flex-shrink: 1;">1</div>    <!-- Makes the 1st flex item shrink 1-times than others, which is a default value also. -->
+
+        <div style="flex-shrink: 1;">2</div>    <!-- Makes the 2nd flex item shrink 1-times than others, which is a default value also. -->
+
+        <div style="flex-shrink: 0;">3</div>    <!-- Makes the 3rd flex item shrink 0-times than others. -->
+
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- text-shadow example-5: with multiple colors. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h1{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0px 0px 25px blue, 0px 0px 5px darkblue;
+            /* let's understand how this text shadow works with multiple colors:
+            - It first apply: 1px vetical and horizontal shadow with 2px blur of black
+            - then after black, 25px blur of blue is attached behind the black
+            - and then, after blue, 5px blur of darkblue is attatched behind the blue. */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is text shadow in heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptates optio iure, dolor natus ipsam. Placeat cumque deleniti, incidunt facilis similique deserunt, fugiat dolorum saepe ad quisquam autem consequatur consequuntur maxime, consectetur blanditiis excepturi eaque esse laboriosam magni nemo porro! Inventore in quia quas aliquid unde animi! Molestias, quas eligendi.</p>
+</body>
+</html>

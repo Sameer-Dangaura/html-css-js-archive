@@ -1,0 +1,15 @@
+
+* offset meaning : the amount or distance by which something is out of line.
+
+
+> CSS Outline Offset
+----------------------
+:
+The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+
+The following example specifies an outline 15px outside the border edge:
+
+Example: do visit "outline_offset" folder.
+
+
+

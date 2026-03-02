@@ -1,0 +1,28 @@
+<!-- The ::after pseudo-element can be used to insert some content after the content of an element. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after{
+            content: url('../img/smile.png');
+        }
+        p::after{
+            content: "😘💕";
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a heading</h1>
+
+    <p>The ::after pseudo-element inserts content after the content of an element.</p>
+
+    <h1>This is a heading</h1>
+</body>
+</html>

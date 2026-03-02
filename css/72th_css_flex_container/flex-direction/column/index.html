@@ -1,0 +1,46 @@
+<!-- Example using flex-direction: column 
+
+The column value displays the flex items vertically (from top to bottom):
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styling div.flex-container */
+        .flex-container{
+            display: flex;  /* making div.flex-container as flex container */
+
+            flex-direction: column;    /* column value displays the flex items vertically (from top to bottom) */
+
+            background-color: blue;
+        }
+
+        /* styling those div which are direct child of div.flex-container */
+        .flex-container > div{
+            background-color: #f1f1f1;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>The flex-direction property</h1>
+    <p>flex-direction: column; stacks the flex items vertically (from top to bottom):</p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

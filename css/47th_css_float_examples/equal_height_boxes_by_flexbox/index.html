@@ -1,0 +1,89 @@
+<!-- However, using float is not very flexible. It is ok if you can guarantee that the boxes will always have the same amount of content in them. But many times, the content is not the same. If you try the example above on a mobile phone, you will see that the second box's content will be displayed outside of the box. 
+ 
+This is where CSS3 Flexbox comes in handy - as it can automatically stretch boxes to be as long as the longest box: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexcontainer{
+
+            display: flex;  /* makes container to flex container.  */
+
+            flex-wrap: nowrap;  /* This disables wrapping text of flexbox container to make text flexible inside the container.   or,   you can say    This prevents the items inside the flexbox container from wrapping onto the next line.       
+            To understand more about this scroll down to last.*/ 
+
+            background-color: dodgerblue;
+        }
+
+        .box{
+            background-color: #f1f1f1;
+            
+            width: 50%;
+
+            /* Here, height is not necessary to initialize for the boxes even though the content of two boxes are not same. Because '.flexcontainer's' display is seted to flex and hence the child of '.flexcontainer's' height are same */
+
+            margin: 50px;
+            text-align: center;
+            line-height: 75px;  /* This sets the height of each line of text within the box, creating vertical spacing. */
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexible boxes</h1>
+
+    <div class="flexcontainer">
+
+        <div class="box">
+            Box 1 - This is some text to make sure that the content gets really tall. This is some text to make sure that the content gets really tall.
+        </div>
+
+
+        <div class="box">
+            Box 2 - My height will follow Box 1.
+        </div>
+
+    </div>
+
+    <p>Try to resize the browser window to see the flexible layout.</p>
+
+    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+</body>
+</html>
+
+
+<!--
+Q. Make me understand why the flex-wrap: nowrap is used.
+ans:
+----
+
+ChatGPT said: 
+            The flex-wrap property in CSS controls how flex items behave when there isn't enough space in a flex container to fit them all on one line.
+
+
+Why use flex-wrap: nowrap?
+:
+
+Default Behavior: 
+    By default, flex-wrap is set to nowrap(i.e. no-wrap). This means that all flex items will remain in a single line, even if they overflow the container's boundaries. Using flex-wrap: nowrap explicitly reinforces this behavior.
+
+    That means without using it explicityly flex follows this behavior by default.
+
+Purpose in Your Case:
+
+- In your code, flex-wrap: nowrap ensures that all .box elements remain on a single line, even if they collectively exceed the width of the .flex-container.
+
+- This is useful when you want your items to stay aligned horizontally in a row without breaking to a new line, especially when implementing scrollable layouts or maintaining a fixed row of items.
+
+
+
+You will learn more about flexbox in flexbox chapter. 
+
+-->

@@ -1,0 +1,32 @@
+<!-- Example for the :hover pseudo-classes --hover over a <div> element to show a <p> element (like a tooltip): -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.hoverable p{
+            display: none;
+            background-color: yellow;
+            font-size: 20px;
+            padding: 20px;
+        }
+        div.hoverable:hover p{
+            display: block; /* means that when you hover over a <div> element, the <p> element inside it becomes visible or changes its display property to block. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple tooltip hover example</h1>
+
+    <div class="hoverable">
+        Hover over me.
+        <p>!Tadaa, I am here.</p>
+    </div>
+</body>
+</html>
