@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp
+
+# Ignore specific folder/files
+My_portfolio
+Practicing_(html_css_js)

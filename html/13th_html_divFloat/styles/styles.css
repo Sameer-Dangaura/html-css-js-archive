@@ -1,0 +1,8 @@
+div.mycontainer {
+    width:100%; 
+    overflow: hidden;   
+}
+div.mycontainer div{
+    width:30%;
+    float: left;
+}

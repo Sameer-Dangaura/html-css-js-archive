@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Radio Buttons</h2>
+    <p>Choose your favorite Web language:</p>
+    <form>
+        <input type="radio" id="html" name="fav_langauge" value="HTML">
+
+        <label for="html"> HTML </label><br>
+        
+        <input type="radio" id="css" name="fav_langauge" value="CSS">
+        
+        <label for="css"> CSS </label><br>
+        
+        <input type="radio" id="javascript" name="fav_langauge" value="JavaScript">
+        
+        <label for="javascript"> JavaScript </label><br>
+    </form>
+</body>
+</html>
+
+<!-- 
+//Here you will learn about    value attribute:
+//For    name attribute    go to text_fields file.
+
+
+
+> Tip
+------
+:
+-> what we learn about    name attribute    in radio buttons 
+is using same     name attribute (i.e.name=fav_langauge)     in 3 input(HTML, CSS, JavaScript) we cannot select all of them. That means we can Choose one of them.     
+
+
+
+
+Q. is it necessary to use    value attribute     while creating radio buttons for the form :
+ <form>
+    <input type="radio" id="html" name="fav_langauge" value="HTML">
+    <label for="html"> HTML </label><br>
+    <input type="radio" id="css" name="fav_langauge" value="CSS">
+    <label for="css"> CSS </label><br>
+    <input type="radio" id="javascript" name="fav_langauge" value="JavaScript">
+    <label for="javascript"> JavaScript </label><br>
+</form>
+
+Ans:
+-----
+
+Yes, it's necessary to use the     value attribute      when creating radio buttons in a form. The     value attribute     determines what data will be sent to the server when the form is submitted and a radio button is selected.
+
+In your example, each radio button represents a choice for the user's favorite programming language. When the form is submitted, the selected radio button's value will be sent as part of the form data.
+
+Here’s the significance:
+
+ , where the   'fav_langauge'    is the    key    which is used to reference the input's value after form submission.
+
+-----------------------------------------------------------------
+* If the user selects the "HTML" radio button and submits the form, the form will send:      fav_langauge=HTML.
+
+* If the user selects "CSS," it will send:     fav_langauge=CSS.
+
+* If the user selects "JavaScript," it will send:     fav_langauge=JavaScript.
+------------------------------------------------------------------
+
+Without the value attribute, the radio button wouldn't contribute any data when submitted, which defeats the purpose of having a selection.
+
+
+In summary:
+
+* id: Uniquely identifies the radio button in the document (for use with labels or JavaScript).
+
+* name: Groups radio buttons together so that only one can be selected.
+
+* value: Specifies the data sent to the server when the form is submitted and a particular radio button is selected.
+ 
+-->

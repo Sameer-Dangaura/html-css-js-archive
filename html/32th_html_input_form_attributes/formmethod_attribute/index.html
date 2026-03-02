@@ -1,0 +1,25 @@
+
+<!-- A form with two submit buttons. The first sends the form-data with method="get". The second sends the form-data with method="post": -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The input formmethod attribute:</h2>
+    <p>The formmethod attribute defines the HTTP method for sending form-data to the action URL.</p>
+
+    <form action="/action_page.php">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" formmethod="get" value="Submit using get" >
+        <input type="submit" formmethod="post" value="Submit using post" >
+    </form>
+</body>
+</html>

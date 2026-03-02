@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+* From this chapter, we are not going to make note on copy.
+
+* This idea is came from JavaScript section.
+-------------------------------------------------------------------------------

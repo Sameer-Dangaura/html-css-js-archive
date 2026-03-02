@@ -1,0 +1,32 @@
+
+<!-- An input field located outside of the HTML form (but still a part of the form): -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The input form attribute:</h2>
+    <p>The form attribute specifies the form an input element belongs to.</p>
+
+    <form action="/action_page.php" id="form1">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>The "Last name" field below is outside the form element, but still part of the form.</p>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" form="form1"><br><br>
+
+    <p>Let the "Email" field below is outside the formn element, and also do not make the part of the form (that means not using form attribute with this input element).
+    </p>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email">
+
+    <p><strong>Tip:</strong> After submiting form, you can see to the browser's address bar that email value is not sent.</p>
+</body>
+</html>

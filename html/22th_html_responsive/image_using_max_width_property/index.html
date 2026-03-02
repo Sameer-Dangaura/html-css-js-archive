@@ -1,0 +1,43 @@
+<!--  
+ To feel the responsive image, you have to visit with mobile phone
+then, you will feel real experience   between the responsive image and 
+Not-Responsive image. 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Responsive Image - using max-width property</h1>
+
+    <p>"max-width:100%" prevents the image from getting bigger than its original size. However, if you make the browser window smaller, the image will still scale down.</p>
+
+    <p>Resize the browser window to see the effect.</p>
+
+    <img src="../images/personWearJacket.png" alt="person wearing jacket" style="max-width:100%; height:auto;">
+    
+</body>
+</html>
+
+<!-- 
+-----------------------------------------------------------------------
+Q. what happens if we use style="max-width:100%; " in <img> ?
+ans:
+----
+Using style="max-width:100%;" on an <img> element ensures that the image will not exceed the width of its container. Here's what happens:
+
+* Image Shrinks to Fit:
+ The image will scale down proportionally if its original width is larger than the width of the container, preventing it from overflowing.
+
+* No Upscaling:
+ If the image's original width is smaller than the container, it will not scale up to fill the container, preserving the image's original size.
+
+* Responsive Layout:
+ This is useful for making images responsive in web designs. It adapts to different screen sizes without distorting the image's aspect ratio.
+
+  -->

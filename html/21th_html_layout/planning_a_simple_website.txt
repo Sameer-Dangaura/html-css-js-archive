@@ -1,0 +1,9 @@
+By mdn:
+-------
+
+Planning a simple website
+--------------------------
+:
+Once you've planned out the structure of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called Information architecture. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages, this can be fairly simple, and fun!
+
+! Do visit mdn's document and website structure webpage.

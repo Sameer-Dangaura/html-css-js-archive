@@ -1,0 +1,25 @@
+
+<!-- An HTML form with two submit buttons, with different actions: -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The input formaction attribute:</h2>
+    <p>The formaction attribute specifies the URL of a file that will process the input when the form is submitted.</p>
+
+    <form action="action_page.php">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+    </form>
+</body>
+</html>
+

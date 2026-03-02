@@ -1,0 +1,53 @@
+<!--Since, I donot know before to use file path in html.
+    That's why, I got difficulties to deal with relative 
+    files in :
+    1) 18th_html_js2_taste/js_change_attribute
+    2) 8th_html_imageBackgroundUpdated -->
+
+<!--Now, we know how to deal with relative files:-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning File path in html:</h1>
+
+    <h2>Grandparents:</h2>
+
+    <img src="../../grandpa.png" alt="Grandparents picture" style="width:120px;">
+
+    <h2>Parnets:</h2>
+
+    <img src="../parent.jpg" alt="Parnets" style="width:120px;">
+
+    <h2>Me:</h2>
+
+    <img src="me.webp" alt="Me" style="width:120px;">
+
+    <h2>Childs:</h2>
+
+    <img src="child/child.webp" alt="Childs" style="width:120px;">
+
+</body>
+</html>
+
+
+<!-- 
+Meaning of each path:
+
+1) src="../../grandpa.png"
+means: file is located in the folder two step up from current folder.
+
+2) src="../parent.jpg"
+means: file is located in the folder one step up from current folder.
+
+3) src="me.webp"
+means: file is located in the same folder as the current page.
+
+4) src="child/child.webp"
+means: file is located in the child folder in the current folder. -->

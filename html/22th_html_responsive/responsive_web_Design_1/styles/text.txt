@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #f1f1f1;
+    display: block;
+    padding:20px;
+}
+
+nav ul a{
+    display: inline-block;
+    list-style-type: none; 
+    border:#f4dbdb;
+    width: 100%;
+    padding: 10px;
+}
+
+nav{
+    width: 20%;
+    float: left;
+}
+
+article{
+    width: 60%;
+    float: left;
+}
+
+aside{
+    width: 20%;
+    float: left;
+}
+
+body footer{
+    width: 100%;
+    background-color: #f9eded;
+    padding: 10px;
+}

@@ -1,0 +1,99 @@
+> HTML Responsive Web Design:
+-----------------------------
+:
+Responsive web design is about creating web pages that look good on all devices!
+
+A responsive web design will automatically adjust for different screen sizes and viewports.
+
+Q. What is Responsive Web Design?
+ans:
+Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones):
+---------------------------------------------------
+e.g: YOU can visit our "responsive web Desing 1". |
+---------------------------------------------------
+
+
+
+1)Setting The Viewport
+----------------------
+:
+To create a responsive website, add the following <meta> tag to all your web pages:
+-------------------------------------------------------------------------
+Example:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+-------------------------------------------------------------------------
+
+This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.
+
+! This Viewport topic is already covered in "html head" chapter.
+
+
+
+2)Responsive Images
+-------------------
+:
+Responsive images are images that scale nicely to fit any browser size.
+
+(i) Using the width Property
+:
+If the CSS width property is set to 100%, the image will be responsive and scale up and down:
+-----------------------------------------------
+<img src="img_girl.jpg" style="width:100%;">  |
+-----------------------------------------------
+Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the     max-width    property instead.
+
+(ii) Using the max-width Property
+:
+If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+---------------------------------------------------------------
+<img src="img_girl.jpg" style="max-width:100%;height:auto;">  |
+---------------------------------------------------------------
+
+(iii) Show Different Images Depending on Browser Width
+:
+The HTML <picture> element allows you to define different images for different browser window sizes.
+
+Resize the browser window to see how the image below changes depending on the width:
+--------------------------------------------------------------------
+Example:
+--------
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+---------------------------------------------------------------------
+
+
+
+3) Responsive Text Size
+------------------------
+:
+The text size can be set with a "vw" unit, which means the "viewport width".
+
+That way the text size will follow the size of the browser window:
+------------------------------
+e.g: visit it's folder.
+------------------------------
+
+Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+
+
+
+4) Media Queries
+----------------
+:
+In addition to resize text and images, it is also common to use media queries in responsive web pages.
+
+With media queries you can define completely different styles for different browser sizes.
+
+Example: resize the browser window to see that the three div elements below will display horizontally on large screens and stack vertically on small screens:
+
+
+
+5) Responsive Web Page - Full Example
+--------------------------------------
+:
+A responsive web page should look good on large desktop screens and on small mobile phones.
+

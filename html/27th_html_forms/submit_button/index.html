@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Submit Button</h2>
+    <form action="/action_page.php">
+
+        <!-- Here   "action_page.php"   file doesnot exist. 
+         It is just an example. -->
+
+        <label for="fname"> First Name </label><br>
+
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname"> Last Name </label><br>
+
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <input type="submit" value="Submit"><br>
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+    <p><strong>Tip:</strong> After submiting form, you can see to the browser's address bar that your entered value is sent.</p> 
+
+</body>
+</html>
+
+<!-- 
+
+Q. Make me understand this :
+ <form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+Ans:
+----
+This HTML code represents a simple form that collects a user's first and last name, and submits the information to a server-side script located at            /action_page.php        when the "Submit" button is clicked. Let’s break it down step by step:
+
+
+1. <form action="/action_page.php">
+:
+* The <form> tag defines the start of a form.
+
+* The    action attribute     specifies where the form data should be sent when submitted. In this case, it will be sent to      /action_page.php.
+
+
+2. <label for="fname">First name:</label><br>
+:
+* The <label> element is used to provide a label or description for the form control (like text input).
+
+* The    for="fname" attribute    links the label to the input element with the id="fname". This helps associate the label "First name:" with the corresponding input field.
+
+* <br> is a line break to ensure the next element starts on a new line.
+
+
+3. <input type="text" id="fname" name="fname" value="John"><br>
+:
+* The <input> element creates a text input field where users can enter their first name.
+
+* type="text" means this input expects text.
+
+* id="fname" gives a unique identifier to the input field, which links it to the label.
+
+* name="fname" is important because this is the name of the form data that will be sent to the server when the form is submitted (e.g., fname=John).
+
+* value="John" sets the default value of the text input field to "John".
+
+* <br> again creates a line break to separate elements visually.
+
+
+4. <label for="lname">Last name:</label><br>
+:
+* This is another label for the next text input, for the "Last name".
+
+* It works similarly to the first label, linking the description to the next input field using for="lname".
+
+
+5. <input type="text" id="lname" name="lname" value="Doe"><br><br>
+:
+* Another text input field, this time for the last name.
+
+* id="lname" links the input to the label.
+
+* name="lname" will send the entered last name as part of the form data (e.g., lname=Doe).
+
+* value="Doe" prepopulates the field with "Doe".
+
+* The two <br> tags are used to create extra space between this input and the submit button.
+
+
+6. <input type="submit" value="Submit">
+:
+* This is the submit button.
+
+* type="submit" means that clicking this button will send the form data to the location specified in the     action attribute (/action_page.php).
+
+* value="Submit" defines the text displayed on the button.
+
+
+Result:
+--------
+When the user clicks the "Submit" button, the form will send the following data to the server:
+------------------------------------
+ fname=John&lname=Doe
+------------------------------------
+
+If the user changes the values in the form fields before submitting, the form will send the updated data instead.
+ 
+-->

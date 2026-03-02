@@ -1,0 +1,46 @@
+body{
+    background-color: #92A8D1;
+}
+
+/* This below is styled to nav's ul element having nav element's attribute class ="mynav".  */
+.mynav ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: #34568B;
+    overflow: hidden;
+}
+
+/* This below is styled to li having class = "mylist".
+Since, we have used    class    attribute to li element which is use to style multiple element. 
+
+If we use     id     attribute to li elements then each list contain different id's . So every li element would be styled seperately. 
+*/
+.mylist {
+    float: left;
+}
+
+.mylist a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 18px;
+}
+
+form{
+    padding:18px;
+}
+
+a:hover, a:active{
+    background-color: blue; 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 75% 25%; /* Here 75% is for article and 25% is for aside. */
+}
+
+aside{
+    border:1px solid black;
+}

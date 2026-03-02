@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Datalist element:</h2>
+    <p>The datalist element specifies a list of pre-defined options for an input element.</p>
+    <p>Note:<br>
+        datalist element is not a replacement for select element. A datalist element does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
+        For more learn about it, do visit MDN. 
+    </p>
+
+    <form action="action_page.php" autocomplete="off"> <!--  here the autocomplete="off" plays very important role. It prevents to do not suggest previously used random word used by you and only suggest default option value which are used in option element.  -->
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+             <option value="Chrome"> <!--    here, it is not needed use </option> like as used in <select>. Because in <datalist> we are not displaying value as option to the user, we are just suggesting the value to the user. -->
+            <option value="Opera-mini">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

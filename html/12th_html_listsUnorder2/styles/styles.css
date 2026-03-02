@@ -1,0 +1,21 @@
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: pink;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    padding: 18px;
+}
+li a:hover{
+    background-color: hotpink;
+}

@@ -1,0 +1,6 @@
+body{
+    background-image: url('img/light_img.png');
+    background-repeat: no-repeat; /* To avoid the background image from repeating itself */
+    background-size: cover; /* background image to cover the entire element */
+    background-attachment: fixed; /*  to make sure the entire element is always covered */
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Select element</h2>
+    <p>You can preselect an option with the selected attribute:</p>
+
+    <form action="action_page.php" method="get" target="_blank">
+
+        <label for="cars"> Choose a car: </label>
+
+        <select id="cars" name="cars">
+
+            <option value="Volvo"> Volvo </option>
+
+            <option value="Saab"> Saab </option>
+
+            <!-- Defining pre-selected option: -->
+            <option value="Fiat" selected> Fiat </option>
+
+            <option value="Audi"> Audi </option>
+
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

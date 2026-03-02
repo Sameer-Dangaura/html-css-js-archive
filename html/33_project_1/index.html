@@ -1,0 +1,54 @@
+
+<!-- a simple facebook login page by html and css:
+ 
+!But it is not completed. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>facebook</h1>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <form action="/action_page.php" method="post">   <!--post method is used to hide sensitive data of the user from the browsers address bar.-->
+
+                <fieldset>
+                    <h2>Log into Facebook</h2>
+
+                    <input type="email" id="email" name="email" placeholder=" Email address or phone number " size="30"><br><br>    <!--This email type accepts the phone number or not idk. I wanted to accepts both email and phone number using one type so I used it.-->
+        
+                    <input type="password" id="password" name="password" placeholder=" Password "><br><br>
+        
+                    <input type="submit" id="login" value="Log in" style="font-size: 17px;"><br><br>
+
+                    <div id="alternate-way">
+                        <a href="#forgot" id="forgot-account">Forgottan account?</a>
+                    
+                        <div class="conjuction-symbol">
+                            <hr id="left-line"> 
+                            <div id="conjunction"> or </div> 
+                            <hr id="right-line"><br>
+                        </div>
+
+                        <button onclick="createNewAccount()" id="create-new-account"> Create new account </button>    <!--here, createNewAccount() function is just for example to creating new account using js function when this button is clicked-->
+
+                    </div>
+
+                </fieldset>
+                
+            </form>
+
+        </section>    
+    </main>
+
+</body>
+</html>

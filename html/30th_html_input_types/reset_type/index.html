@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Reset button</h2>
+    <p>The <strong>input type="reset"</strong> defines a reset button that resets all form values to their default values:</p>
+
+    <form action="action_page.php">  <!--Here you can use method="post" for hide sensitive dat/information. -->
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p>If you enter the input values and then click the "Reset" button, the form-data will be reset to the default values.</p>        
+</body>
+</html>

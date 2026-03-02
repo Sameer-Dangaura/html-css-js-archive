@@ -1,0 +1,27 @@
+/* Scroll down, there is something... */
+
+a:link , a:visited{
+    color:white;
+    background-color:#f44336;;
+    text-align:center;
+    text-decoration: none;
+    padding:20px 30px;
+    display:inline-block;
+}
+
+a:hover{
+    background-color: red;
+}
+
+a:active{
+    background-color: blue;
+}
+
+
+/*
+When setting the style for several link states, there are some order rules:
+
+a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover
+
+*/

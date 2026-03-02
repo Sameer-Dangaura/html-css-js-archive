@@ -1,0 +1,113 @@
+body{
+    background-color: #92A8D1;
+}
+
+/* This below is styled to nav's ul element having nav element's attribute class ="mynav".  */
+.mynav ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: #34568B;
+    overflow: hidden;
+}
+
+/* This below is styled to li having class = "mylist".
+Since, we have used    class    attribute to li element which is use to style multiple element. 
+
+If we use     id     attribute to li elements then each list contain different id's . So every li element would be styled seperately. 
+*/
+.mylist {
+    float: left;
+}
+
+.mylist a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 18px;
+}
+
+form{
+    padding:18px;
+}
+
+a:hover, a:active{
+    background-color: blue; 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 75% 25%; /* Here 75% is for article and 25% is for aside. */
+}
+
+aside{
+    border:1px solid black;
+}
+
+
+
+
+/* 
+added breakpoint for 800px media queries: */
+@media only screen and (max-width: 800px){
+    main{
+        grid-template-columns: 100%;
+    }
+}
+
+/* 
+Q. Meaning of this: grid-template-columns: 100%; ?
+ans:
+----
+The CSS property grid-template-columns: 100% defines the structure of the columns in a grid layout. When you specify 100%, it means that the grid will have one column that takes up 100% of the available width.
+
+In simpler terms:
+
+* Grid layout: A method for creating flexible and responsive web layouts.
+
+* grid-template-columns: 100%: The layout will have a single column, and it will stretch to fill the full width of the grid container.
+
+For example, if you have a container with a grid and apply this property, all content inside will be placed in one column, which spans the entire width of the container.
+ */
+
+
+
+
+
+/* --------------------------------------------------------------------------
+Q. what about : @media only screen and (max-width: 800px) ?
+ans:
+----
+The media query:
+--------------------------------------------
+@media only screen and (max-width: 800px) {
+    // styles 
+  }
+--------------------------------------------
+
+is similar to @media screen and (max-width: 800px), but with the addition of the keyword only.
+
+
+Breakdown:
+----------
+
+* only screen:
+ This is used to target only screen devices and explicitly exclude older browsers that do not support media queries. In modern browsers, only is mostly redundant because they already support media queries. However, it was originally introduced to prevent older browsers (like Internet Explorer 8 and earlier) from applying the media query styles by accident, even if they didn't understand media queries.
+
+* (max-width: 800px):
+ This limits the styles to screens that are 800px or less in width.
+
+Summary:
+--------
+
+* @media screen and (max-width: 800px):
+ Targets all screens with a width of 800px or less.
+
+* @media only screen and (max-width: 800px):
+ Does the same, but with an added safeguard to avoid older browsers that don't understand media queries from applying the styles.
+
+
+In practice, modern web design rarely needs the only keyword because most browsers now fully support media queries. However, it can still be used as a defensive measure for backward compatibility. 
+
+------------------------------------------------------------------------------- */

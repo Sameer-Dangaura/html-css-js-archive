@@ -1,0 +1,141 @@
+> HTML Form Elements
+---------------------
+:
+This chapter describes all the different HTML form elements.
+
+The HTML <form> element can contain one or more of the following form elements:
+
+* <input>
+* <label>
+* <select>
+* <textarea>
+* <button>
+* <fieldset>
+* <legend>
+* <datalist>
+* <output>
+* <option>
+* <optgroup>
+
+
+
+1) The <input> Element
+-----------------------
+:
+One of the most used form elements is the <input> element.
+
+The <input> element can be displayed in several ways, depending on the       type attribute.
+
+e.g: <input type="text" id="fname" name="fname">
+
+
+
+2) The <label> Element
+-----------------------
+:
+The <label> element defines a label for several form elements.
+
+The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+
+The    for attribute    of the <label> tag should be equal to the    id attribute   of the <input> element to bind them together.
+
+
+
+3) The <select> Element
+------------------------
+:
+The <select> element defines a drop-down list:
+
+e.g: do visit select_element folder.
+
+
+The <option> element defines an option that can be selected.
+
+By default, the first item in the drop-down list is selected.
+
+To define a pre-selected option, add the selected attribute to the option:
+
+e.g: do visit select_element2 folder.
+
+
+Visible Values:
+
+Use the size attribute to specify the number of visible values:
+
+e.g: do visit select_element3 folder.
+
+
+Allow Multiple Selections:
+
+Use the multiple attribute to allow the user to select more than one value:
+
+e.g: do visit select_element4 folder.
+
+
+
+4) The <textarea> Element
+--------------------------
+:
+The <textarea> element defines a multi-line input field (a text area):
+e.g: do visit textarea_element folder.
+
+The rows attribute specifies the visible number of lines in a text area.
+
+The cols attribute specifies the visible width of a text area.
+
+
+You can also define the size of the text area by using CSS:
+-----------------------------------------------------------
+<textarea name="message" style="width:200px; height:600px;">
+You can write something here...
+</textarea>
+-----------------------------------------------------------
+
+
+
+5) The <button> Element
+------------------------
+:
+The <button> element defines a clickable button:
+
+e.g: do visit 18th_html_js2-taste folder which is already done.
+
+Note:
+ Always specify the type attribute for the button element. Different browsers may use different default types for the button element.
+
+
+
+6) The <fieldset> and <legend> Elements
+----------------------------------------
+:
+The <fieldset> element is used to group related data in a form.
+
+The <legend> element defines a caption for the <fieldset> element.
+
+e.g: do vist.
+
+
+
+7) The <datalist> Element
+--------------------------
+:
+The <datalist> element specifies a list of pre-defined options for an <input> element.
+
+Users will see a drop-down list of the pre-defined options as they input data.
+
+The   list attribute   of the <input> element, must refer to the    id attribute of the <datalist> element.
+
+
+Note:
+ <datalist> is not a replacement for <select>. A <datalist> does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
+
+
+
+8) The <output> Element
+------------------------
+:
+The <output> element represents the result of a calculation (like one performed by a script).
+
+

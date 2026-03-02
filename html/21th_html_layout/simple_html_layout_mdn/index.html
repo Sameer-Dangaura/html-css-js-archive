@@ -1,0 +1,278 @@
+<!-- 
+A simple html layout example from mdn, "document and web structure". 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal - myWikipedia</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    
+     <!-- Here is our main header that is used across all the pages of our website -->
+    <header>
+        <h1>myWikipedia</h1>
+    </header>
+<!-- -----------------------------------------------------------------
+header:
+ Usually a big strip across the top with a big heading, logo, and  perhaps a tagline. This usually stays the same from one webpage to  another. 
+--------------------------------------------------------------------->
+
+    <nav class="mynav">
+        <ul>
+            <li class="mylist"><a href="home.html">Home</a></li>
+            <li class="mylist"><a href="about.html">About</a></li>
+            <li class="mylist"><a href="articles.html">Articles</a></li>
+            <li class="mylist"><a href="contact.html">Contact</a></li>
+<!-- -------------------------------------------------------------- -->
+             <!-- A Search form is another common non-linear way to navigate through a website. -->
+            <form>
+                <input type="search" name="q" placeholder="Search your query" />
+                <input type="submit" value="search" />
+              </form>
+<!--
+              This above HTML snippet represents a simple search form that a user might find on a website. It allows users to input a search query and then submit it to the server or a search engine. Let’s break down each part of the code:
+
+              1. <form> Tag:
+                ------------
+              The <form> tag defines an HTML form, which is used to collect user input. The form can send this data to a server when it is submitted.
+
+              2. <input type="search">:
+              -------------------------
+              type="search":
+               This creates a text input field specifically intended for search queries. The type="search" is functionally similar to type="text", but it can provide some browser-specific styling and features, such as a clear button to clear the input.
+
+              name="q":
+               The name attribute specifies the name of the input field. When the form is submitted, this is the name of the key that will be sent along with the value entered by the user. Here, q is a common shorthand for "query."
+               -For understand this you should go and live preview this document and try to search you queries in your search bar, and then you will see your provided query is contained by "q".
+
+              placeholder="Search your query":
+               This attribute provides a hint to the user about what they should enter in the input field. It displays the text "Search query" inside the field as a placeholder until the user starts typing.
+
+              3. <input type="submit">:
+              ------------------------
+              type="submit":
+               This creates a submit button that the user can click to submit the form. When clicked, it triggers the form to be sent to the server or processed by a script.
+
+              value="search":
+               The value attribute specifies the text displayed on the submit button. In this case, the button will display the text "search" 
+
+               Overall, this form structure is commonly used on websites to allow users to search for content.
+--------------------------------------------------------------------->
+
+        </ul>
+    </nav>
+
+     <!-- Here is our page's main content -->
+    <main>
+        <!-- It contains an article -->
+        <article>
+            <h2>Nepal</h2>
+
+            <p>Nepal is a landlocked country. Nepal is very beautiful country in the world. and lav lav Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eligendi esse expedita impedit. Quos, quasi et ducimus a magnam Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor corporis error atque assumenda? Enim libero sint aut eaque nihil!
+            </p>
+
+            <h3>Kathmandu</h3>
+
+            <p>Kathmandu is the capital city of Nepal. Kathmandu is tourist attracted place in nepal. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt suscipit, iusto distinctio neque dolor, cumque, placeat unde vitae qui cum dignissimos quis blanditiis consequuntur dolorum vel?</p>
+
+            <h3>Pokhara</h3>
+
+            <p>Pokhara is also a tourist attracted place where it is more grreny than Kathmandu and it is less polluted. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos iste dolore cumque expedita qui tempore hic labore quibusdam in iure.</p>
+        </article>
+
+         <!-- The aside content can also be nested within the main content -->
+          <aside class="design">
+            <h2>Top Tourist Destinations</h2>
+            <ul>
+                <li>Mount Everest</li>
+                <li>Lumbini - Birthplace of Buddha</li>
+                <li>Chitwan National Park</li>
+                <li>Patan Durbar Square</li>
+            </ul>
+
+            <h2>Related Articles</h2>
+            <ul>
+                <li><a href="history-of-nepal.html">History of Nepal</a></li>
+                <li><a href="himalayas-in-nepal.html">Himalayas in Nepal</a></li>
+                <li><a href="nepali-culture.html">Nepali Culture and Traditions</a></li>
+            </ul>
+          </aside>
+    </main>
+
+    <!-- And here is our main footer that is used across all the pages of our website -->
+    <footer>
+        <p>&copy; 2024 myWikipedia. All rights reserved.</p>
+<!-- -------------------------------------------------------------------        
+The line <p>&copy; 2024 myWikipedia. All rights reserved.</p> in the footer of your webpage serves as a copyright notice. Here's what each part means:
+
+* <p> and </p>:
+ These are HTML tags used to define a paragraph. They indicate that the enclosed text is a paragraph element in HTML.
+
+* &copy;:
+ This is an HTML entity representing the copyright symbol (©).
+
+* 2024:
+ This is the year of the copyright. It indicates the year the content was created or last updated, which in this case is 2024.
+
+* myWikipedia:
+ This is the name of the website or entity that owns the content, suggesting that the content is copyrighted by "myWikipedia."
+
+* All rights reserved.:
+ This phrase means that all the rights to the content are reserved by the copyright holder (myWikipedia). It restricts others from using the content without permission.
+
+In summary, this line indicates that the content on the webpage is copyrighted by "myWikipedia" in the year 2024, and all rights to the content are reserved by the website owner. 
+ --------------------------------------------------------------------------->
+
+        <nav class="mynav">
+            <ul>
+                <li class="mylist"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="mylist"><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- 
+Q. Can you provide simple html webpage using sementic tags having the website is 'myWikipedia' and article is about 'Nepal'.
+ans:
+---------
+chatgpt |:
+---------
+Certainly! Here's a simple HTML webpage structure using semantic tags. The website is named "myWikipedia," and the article is about "Nepal." The page includes a header, main content, aside for supplementary information, and a footer. -->
+<!-- 
+code:
+-----
+---------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal - myWikipedia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    -->
+    <!-- Header Section -->
+    <!--
+     <header>
+        <h1>myWikipedia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header> 
+    -->
+
+    <!-- Main Content Section -->
+<!--      
+    <main>
+        <article>
+            <header>
+                <h2>Nepal</h2>
+                <p><small>Last updated: August 16, 2024</small></p>
+            </header>
+
+            <p>Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country in South Asia. It is located mainly in the Himalayas, but also includes parts of the Indo-Gangetic Plain. It borders China in the north and India in the south, east, and west, while Bangladesh is located within only 27 kilometers (17 mi) of its southeastern tip, and Bhutan is separated from it by the Indian state of Sikkim.</p>
+
+            <section>
+                <h3>Geography</h3>
+                <p>Nepal has a diverse geography, including fertile plains, subalpine forested hills, and eight of the world's ten tallest mountains, including Mount Everest, the highest point on Earth. Kathmandu is the capital and the largest city.</p>
+            </section>
+
+            <section>
+                <h3>Culture</h3>
+                <p>Nepal is known for its rich cultural heritage. It has many world heritage sites and is home to various ethnic groups with diverse languages and traditions. Major festivals include Dashain, Tihar, and Holi.</p>
+            </section>
+
+            <section>
+                <h3>Tourism</h3>
+                <p>Nepal is a popular destination for mountaineers, trekkers, and tourists interested in its natural beauty and cultural sites. The country is home to Lumbini, the birthplace of Gautama Buddha, and has numerous national parks and protected areas.</p>
+            </section>
+        </article> 
+        -->
+
+        <!-- Aside Section -->
+<!--          
+        <aside>
+            <h2>Quick Facts about Nepal</h2>
+            <ul>
+                <li>Capital: Kathmandu</li>
+                <li>Population: ~30 million</li>
+                <li>Official Language: Nepali</li>
+                <li>Currency: Nepalese Rupee (NPR)</li>
+                <li>Time Zone: Nepal Time (UTC+5:45)</li>
+            </ul>
+
+            <h2>Related Articles</h2>
+            <ul>
+                <li><a href="history-of-nepal.html">History of Nepal</a></li>
+                <li><a href="himalayas-in-nepal.html">Himalayas in Nepal</a></li>
+                <li><a href="nepali-culture.html">Nepali Culture and Traditions</a></li>
+            </ul>
+        </aside>
+    </main> 
+    -->
+
+    <!-- Footer Section -->
+<!--      
+    <footer>
+        <p>&copy; 2024 myWikipedia. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html> 
+-->
+
+<!-- --------------------------------------------------------------------- -->
+<!-- 
+Explanation of the Structure:
+----------------------------
+
+<header>:
+
+Contains the website title ("myWikipedia") and a navigation menu.
+The navigation links provide access to other parts of the website.
+
+<main>:
+
+<article>:
+     The main content of the page, specifically the article about Nepal. It contains a header with the title of the article, sections on geography, culture, and tourism, and a timestamp for when it was last updated.
+
+<aside>:
+     Contains supplementary information related to the article, such as quick facts about Nepal and links to related articles.
+
+<footer>:
+
+Provides footer content including copyright information and additional navigation links to the privacy policy and terms of service pages.
+
+Customization:
+--------------
+Stylesheet (styles.css):
+ You can create a styles.css file to add custom styling to this webpage.
+
+Additional Pages:
+ The links in the navigation and related articles can point to other pages on your website, each with their own content.
+
+
+This structure provides a clean, semantic, and accessible webpage that is easy to navigate and understand, both for users and search engines. 
+
+---------------------------------------------------------------------->
+

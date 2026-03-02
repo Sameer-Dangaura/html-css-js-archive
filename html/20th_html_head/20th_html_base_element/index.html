@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <base href="https://www.sameerdamm.com/" target="_blank">
+
+<!-- --------------------------------------------------------------- -->
+    <!-- The <base> element specifies the base URL and/or target for all relative URLs in a page.
+
+    The <base> tag must have either an href or a target attribute present, or both.
+    
+    There can only be one single <base> element in a document! -->
+<!-------------------------------------------------------------------- -->
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Base Element</h1>
+    <p><img src="../images/AI_img.jpg" alt="AI image" width="120px">
+        - Notice that we have only specified a relative address for the image. Since we have specified a base URL in the head section, the browser will look for the image at "https://www.sameerdamm.com/images/AI_img.jpg".
+    </p>
+
+    <p><strong>This above image is not displayed beacause, it doesn't get rendered by browser. Because it is trying to open under the domain "sameerdamm" which is not registered as domain server.</strong></p>
+
+    <p>
+        <a href="temp.html">Temp file</a>
+        - Notice that the link opens in a new window, even if it has no target="_blank" attribute. This is because the target attribute of the base element is set to "_blank" by base element.
+        <br>
+        - Since we have specified a base URL in the head section, the browser will look for the link at "https://www.sameerdamm.com/temp.html".
+    </p>
+    
+    <p><strong>This above link doesn't get rendered by browser. Because it is trying to open under the domain "sameerdamm" which is not registered as domain server.</strong></p>
+</body>
+</html>
+
+
+<!-- ---------------------------------------------------------------------
+The <base> element in HTML is used to specify the base URL for all relative URLs within a document. It can also define a default target for all hyperlinks and forms in a document. Here's how it works:
+
+Syntax:
+
+<base href="URL" target="target">
+
+Attributes:
+
+href:
+ Specifies the base URL for all relative URLs in the document. If this attribute is omitted, the base URL is set to the location of the document.
+
+target:
+ Specifies the default target for all hyperlinks and forms in the document. It can have values like _self, _blank, _parent, or _top.
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Element Example</title>
+    <base href="https://www.example.com/" target="_blank">
+</head>
+<body>
+    <a href="page.html">Go to Page</a>
+    <img src="image.png" alt="Image">
+</body>
+</html>
+
+In this example:
+
+The <a> tag will navigate to https://www.example.com/page.html when clicked.
+
+The <img> tag will load an image from https://www.example.com/image.png.
+
+All links will open in a new tab because of the target="_blank" attribute.
+
+
+
+Important Notes:
+-----------------
+
+* The <base> element must be inside the <head> section of the document.
+
+* Only one <base> element is allowed in a document. If multiple <base> elements are defined, only the first one will be taken into account. 
+
+* If at least one of these attributes are specified, the <base> element must come before other elements with attribute values that are URLs, such as a <link>'s href attribute.
+
+-->

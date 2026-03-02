@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+
+.left{
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+
+.main{
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    
+}
+
+.right{
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+
+
+
+
+
+/* styling .left, .right , and .main in one row: */
+
+section {
+    display: flex;  /* make flex container to section */
+}
+
+section .left{
+    flex:1;
+}
+
+section .main{
+    flex:4;
+}
+
+section .right{
+    flex:1;
+}
+
+
+
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+    section {
+        flex-direction: column;
+    }
+  }
+
+
+
+/* 
+--------------------------------------------------------------------------
+Q. what the difference between '@media screen and (max-width:800px;){}' and '@media (max-width: 800px;){}' ?
+ans
+----
+:
+The two media queries:
+
+* @media screen and (max-width: 800px) { // styles }
+
+* @media (max-width: 800px) { // styles }
+
+are very similar but have a slight difference in specificity:
+
+
+1. @media screen and (max-width: 800px) { // styles  }
+:
+This media query is more specific as it targets only screens (such as computer monitors, tablets, and smartphones) with a maximum width of 800px.
+
+The keyword    screen     ensures that the styles inside the media query are applied only when the output device is a screen.
+
+It will exclude other media types like print, speech, or other non-screen devices.
+
+
+2. @media (max-width: 800px) { // styles  }
+:
+This is a broader media query that targets all media types (including screen, print, speech, etc.) as long as the viewport width is 800px or less.
+
+Without the    screen    keyword, this query applies to any device or output type that has a maximum width of 800px, including print media or devices used for assistive technology like screen readers.
+
+
+Key Difference:
+---------------
+
+* screen and (max-width: 800px): Only applies to screen devices.
+
+* (max-width: 800px): Applies to all media types, not just screens.
+
+
+In most cases, if you're designing for visual display (like websites), you'd use the    screen     keyword      to avoid unintended effects on other media types, such as printing.
+------------------------------------------------------------------------------------ 
+*/
+
+

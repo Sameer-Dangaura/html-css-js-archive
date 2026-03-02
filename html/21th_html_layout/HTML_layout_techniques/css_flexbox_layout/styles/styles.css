@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+}
+
+/* style for header */
+header{
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+header h1{
+    padding: 20px;
+}
+
+
+/* style for header navigation */
+header nav ul{
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: pink;
+}
+
+header nav ul li{
+    float: left;
+    text-align: center;
+}
+
+header nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+}
+
+header nav ul li a:hover {
+    background-color: hotpink;
+}
+
+
+/* style for aligning side by side article and aside using flexbox layout. */
+/* create container for flexboxes: */
+/* to understand this go to last of this file. */
+main section{
+    display: -webkit-flex;  /* For older versions of Chrome and Safari */ 
+    display: flex;  /* Standard syntax for flexbox */
+}
+
+/* Flex Item Setup for main section article: */
+main section article{
+    -webkit-flex: 3; /* Flex property with prefix for older browsers */
+    -ms-flex: 3; /* Flex property with prefix for older versions of Internet Explorer */
+    flex: 3; /* Standard flex property */
+    background-color: #f1f1f1;
+}
+
+/* Flex Item Setup for main section aside: */
+main section aside{
+    -webkit-flex: 1; /* Flex property with prefix for older browsers */
+    -ms-flex: 1; /* Flex property with prefix for older versions of Internet Explorer */
+    flex: 1; /* Standard flex property */
+}
+
+
+/* style for footer */
+footer{
+    background-color: gray;
+    text-align: center;
+    color: white;
+}
+
+footer nav ul{
+    list-style-type: none;
+}
+
+
+
+/* Responsive layout - makes the aside and the article (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px){
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* ---------------------------------------------------------------------------
+Q. what about this: 
+main section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+main section aside {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}    
+
+main section article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+}
+
+Ans:
+----
+
+chatgpt:
+-------
+
+The CSS code you provided is used to create a flexbox layout for a webpage. Flexbox is a CSS layout model that makes it easier to design flexible and responsive layout structures. Here’s a breakdown of what each part of the code does:
+
+Explanation of the Code
+------------------------
+
+1. Flex Container Setup
+:
+---------------------------------
+main section {
+    display: -webkit-flex;  // For older versions of Chrome and Safari 
+    display: flex;  // Standard syntax for flexbox 
+  }
+---------------------------------
+
+* main section { ... }:
+ Targets the <section> HTML element to act as a flex container.
+
+* display: flex;:
+ Enables the flexbox layout model on the <section>, making it a flex container. This causes its direct children (flex items) to be laid out according to the rules of flexbox.
+
+*display: -webkit-flex;:
+ Provides support for older versions of Chrome and Safari that used the -webkit- prefix for flexbox.
+
+
+ 2. Flex Item Setup for aside
+ :
+----------------------------------
+main section aside {
+    -webkit-flex: 1;    // Flex property with prefix for older browsers 
+    -ms-flex: 1;    // Flex property with prefix for older versions of Internet Explorer 
+    flex: 1;    // Standard flex property 
+  }
+------------------------------------
+
+* main section aside { ... }:
+ Targets the <aside> HTML element, styling it as a flex item.
+
+* flex: 1;:
+ This sets the flex property of the <aside> element. The flex shorthand property is a combination of three properties: flex-grow, flex-shrink, and flex-basis.
+
+* flex-grow: 1:
+ Allows the <aside> element to grow and fill the available space in the flex container (section), sharing space proportionately with other flex items. A value of 1 means it will grow and take up 1 part of the available space.
+
+* Vendor prefixes (-webkit-flex, -ms-flex):
+ These provide compatibility with older browsers that implemented flexbox with prefixes.
+
+
+ 3. Flex Item Setup for Content
+ :
+---------------------------------------
+main section article {
+    -webkit-flex: 3;    // Flex property with prefix for older browsers 
+    -ms-flex: 3;    // Flex property with prefix for older versions of Internet Explorer 
+    flex: 3;    // Standard flex property 
+    background-color: #f1f1f1;  // Background color of the article content 
+  }
+---------------------------------------
+
+* main section article { ... }:
+ Targets the <article> HTML element, styling it as a flex item.
+
+* flex: 3;:
+ This sets the flex property of the <article> element. It will take up 3 parts of the available space within the flex container (section). This means the <article> will be three times as wide as the <aside> element.
+
+* background-color: #f1f1f1;:
+ Sets a light gray background color for the <article> element.
+
+
+What This Code Achieves
+-----------------------
+
+* Flexbox Layout:
+ The <section> element becomes a flex container, and its children (<aside> and <article>) are flex items. This setup allows for a responsive and flexible layout.
+
+* Responsive Proportions:
+ The flex property defines how the flex items (the aside and article) share the available space. The <aside> will take up 1 part of the space, while the <article> will take up 3 parts, making the <article> three times wider than the <aside>.
+
+* nCross-Browser Compatibility:
+ The use of vendor prefixes (-webkit- and -ms-) ensures that the flexbox layout works in older versions of browsers like Chrome, Safari, and Internet Explorer that required these prefixes.
+
+
+ Summary
+ ---------
+ The provided CSS sets up a flexbox container (section) with two flex items (aside and article). The flex properties are used to control the space distribution between the aside and the article. The aside takes up 1 part of the available space, and the content (article) takes up 3 parts, allowing for a responsive, flexible layout. The code also includes vendor prefixes to ensure compatibility with older browsers. 
+
+
+
+
+Q. difference between the flex-grow: 3 and flex: 3 ?
+Ans:
+---
+While both "flex: 3" and "flex-grow: 3" can be used in CSS flexbox, the key difference is that "flex: 3" is a shorthand property encompassing both "flex-grow: 3" and "flex-basis: 0%" - meaning it will not only allow an element to grow and take up available space proportionally, but it will also set its initial size to 0% of the container, whereas "flex-grow: 3" only controls how much an element can grow relative to other flex items when there is extra space available. 
+-----------------------------------------------------------------------------*/

@@ -1,0 +1,16 @@
+.city{
+    background-color: aquamarine;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.note{
+    color: red;
+    font-size: 20px;;
+}
+
+.nice{
+    font-family: sans-serif;
+    background-color: hotpink;
+}

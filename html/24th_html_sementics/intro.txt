@@ -1,0 +1,210 @@
+
+//We have already learned a lot of things about sementics in "21th_html_layout",
+so you can visit there also.
+
+> HTML Semantic Elements
+-------------------------
+:
+
+* Semantic elements => elements with a meaning.
+
+-------------------------------------------------------------------
+Q. What are Semantic Elements?
+ans:
+----
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+---------------------------------------------------------------------
+
+
+Semantic Elements in HTML:
+-------------------------
+:
+Many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer"> to indicate navigation, header, and footer.
+
+In HTML there are some semantic elements that can be used to define different parts of a web page:  
+
+* <article>
+* <aside>
+* <details>
+* <figcaption>
+* <figure>
+* <footer>
+* <header>
+* <main>
+* <mark>
+* <nav>
+* <section>
+* <summary>
+* <time>
+
+
+1) HTML <section> Element
+--------------------------
+:
+The <section> element defines a section in a document.
+
+According to W3C's HTML documentation: "A section is a thematic grouping of content, typically with a heading."
+
+Examples of where a <section> element can be used:
+
+* Chapters
+* Introduction
+* News items
+* Contact information
+
+A web page could normally be split into sections for introduction, content, and contact information.
+
+
+e.g: do visit w3schools.
+
+
+
+2) HTML <article> Element
+-------------------------
+:
+The <article> element specifies independent, self-contained content.
+
+An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+
+Examples of where the <article> element can be used:
+
+* Forum posts
+* Blog posts
+* User comments
+* Product cards
+* Newspaper articles
+
+e.g: do visit w3schools.
+
+
+
+3) Nesting <article> in <section> or Vice Versa?
+------------------------------------------------
+:
+-> The <article> element specifies independent, self-contained content.
+
+-> The <section> element defines section in a document.
+
+Can we use the definitions to decide how to nest those elements? No, we cannot!
+
+So, you will find HTML pages with <section> elements containing <article> elements, and <article> elements containing <section> elements.
+
+
+
+4) HTML <header> Element
+-------------------------
+:
+The <header> element represents a container for introductory content or a set of navigational links.
+
+A <header> element typically contains:
+
+* one or more heading elements (<h1> - <h6>)
+* logo or icon
+* authorship information
+
+Note:
+ You can have several <header> elements in one HTML document. However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+
+
+
+5) HTML <footer> Element
+------------------------
+:
+The <footer> element defines a footer for a document or section.
+
+A <footer> element typically contains:
+
+* authorship information
+* copyright information
+* contact information
+* sitemap
+* back to top links
+* related documents
+
+You can have several <footer> elements in one document.
+
+
+
+6) HTML <nav> Element
+----------------------
+:
+The <nav> element defines a set of navigation links.
+
+---------------------------------------------------------------------------
+Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major blocks of navigation links.
+
+Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+---------------------------------------------------------------------------
+
+e.g: do visit w3schools.
+
+
+
+7) HTML <aside> Element
+------------------------
+:
+The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+
+The <aside> content should be indirectly related to the surrounding content.
+
+e.g: do visit w3schools.
+
+
+
+8) HTML <figure> and <figcaption> Elements
+-------------------------------------------
+:
+The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+The <img> element defines the actual image/illustration. 
+
+
+
+-------------------------------------------------------------------
+Q. Why Semantic Elements?
+ans:
+According to the W3C: "A semantic Web allows data to be shared and reused across applications, enterprises, and communities."
+---------------------------------------------------------------------
+
+
+
+Semantic Elements in HTML:
+-------------------------
+:
+Below is a list of some of the semantic elements in HTML.
+
+    Tag	        Description
+
+* <article>	Defines independent, self-contained content
+
+* <aside>	Defines content aside from the page content
+
+* <details>	Defines additional details that the user can view or hide
+
+* <figcaption>	Defines a caption for a <figure> element
+
+* <figure>	Specifies self-contained content, like illustrations, diagrams photos,  code listings, etc.
+
+* <footer>	Defines a footer for a document or section
+
+* <header>	Specifies a header for a document or section
+
+* <main>	Specifies the main content of a document
+
+* <mark>	Defines marked/highlighted text
+
+* <nav>	    Defines navigation links
+
+* <section>	Defines a section in a document
+
+* <summary>	Defines a visible heading for a <details> element
+
+* <time>	Defines a date/time
+
+

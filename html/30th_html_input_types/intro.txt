@@ -1,0 +1,268 @@
+-----------------------------------------------------------------------------------------
+//In form tag, we used somewhere: <form action="action_page.php"> indicates that the file is located in the current directory of that HTML file.
+
+//and somewhere: <form action="/action_page.php">, where the leading / indicates that the file is located in the root directory of the website.
+
+//It doesnot exist in our pc right now, which is just an example.
+//that donot matter too much for right now , because of it's unexistance. 
+-----------------------------------------------------------------------------------------
+
+
+
+> HTML Input Types
+-------------------
+:
+This chapter describes the different types for the HTML <input> element.
+
+
+
+> HTML Input Types
+-------------------
+:
+Here are the different input types you can use in HTML:
+
+* <input type="button">
+* <input type="checkbox">
+* <input type="color">
+* <input type="date">
+* <input type="datetime-local">
+* <input type="email">
+* <input type="file">
+* <input type="hidden">
+* <input type="image">
+* <input type="month">
+* <input type="number">
+* <input type="password">
+* <input type="radio">
+* <input type="range">
+* <input type="reset">
+* <input type="search">
+* <input type="submit">
+* <input type="tel">
+* <input type="text">
+* <input type="time">
+* <input type="url">
+* <input type="week">
+
+Tip:
+ The default value of the type attribute is "text".
+
+
+
+1) Input Type Text
+-------------------
+:
+<input type="text"> defines a single-line text input field:
+
+
+
+2) Input Type Password
+-----------------------
+:
+<input type="password"> defines a password field:
+
+The characters in a password field are masked (shown as asterisks or circles).
+
+
+
+3) Input Type Submit
+---------------------
+:
+<input type="submit"> defines a button for submitting form data to a form-handler.
+
+The form-handler is typically a server page with a script for processing input data.
+
+The form-handler is specified in the form's action attribute:
+
+If you omit the submit button's value attribute, the button will get a default text:
+
+
+
+4) Input Type Reset
+--------------------
+:
+<input type="reset"> defines a reset button that will reset all form values to their default values:
+
+If you change the input values and then click the "Reset" button, the form-data will be reset to the default values.
+
+
+
+5) Input Type Radio
+--------------------
+:
+<input type="radio"> defines a radio button.
+
+Radio buttons let a user select ONLY ONE of a limited number of choices:
+
+
+
+6) Input Type Checkbox
+-----------------------
+:
+<input type="checkbox"> defines a checkbox.
+
+Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+
+
+
+7) Input Type Button
+---------------------
+:
+<input type="button"> defines a button:
+
+
+
+8) Input Type Color
+--------------------
+:
+The <input type="color"> is used for input fields that should contain a color.
+
+Depending on browser support, a color picker can show up in the input field.
+
+
+
+9) Input Type Date
+-------------------
+:
+The <input type="date"> is used for input fields that should contain a date.
+
+Depending on browser support, a date picker can show up in the input field.
+
+e.g: do visit date_type folder.
+
+You can also use the min and max attributes to add restrictions to dates:
+
+e.g: do visit w3schools.
+
+
+
+10) Input Type Datetime-local
+------------------------------
+:
+The <input type="datetime-local"> specifies a date and time input field, with no time zone.
+
+Depending on browser support, a date picker can show up in the input field.
+
+
+
+11) Input Type Email
+---------------------
+:
+The <input type="email"> is used for input fields that should contain an e-mail address.
+
+Depending on browser support, the e-mail address can be automatically validated when submitted.
+
+Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.
+
+
+
+12) Input Type Image
+---------------------
+:
+The <input type="image"> defines an image as a submit button.
+
+The path to the image is specified in the src attribute.
+
+
+
+13) Input Type File
+--------------------
+:
+The <input type="file"> defines a file-select field and a "Browse" button for file uploads.
+
+
+
+14) Input Type Hidden
+----------------------
+:
+The <input type="hidden"> defines a hidden input field (not visible to a user).
+
+A hidden field lets web developers include data that cannot be seen or modified by users when a form is submitted.
+
+A hidden field often stores what database record that needs to be updated when the form is submitted.
+
+Note:
+ While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!
+
+e.g: do visit w3schools.
+
+
+
+15) Input Type Month
+---------------------
+:
+The <input type="month"> allows the user to select a month and year.
+
+Depending on browser support, a date picker can show up in the input field.
+
+e.g: do visit w3schools.
+
+
+
+16) Input Type Number
+----------------------
+:
+The <input type="number"> defines a numeric input field.
+
+You can also set restrictions on what numbers are accepted.
+
+The following example displays a numeric input field, where you can enter a value from 1 to 5:
+
+e.g: do visit number_type folder.
+
+
+The following example displays a numeric input field, where you can enter a value from 0 to 100, in steps of 10(i.e. 10-10 steps ley baadhney vayo):
+
+e.g: do visit number_type2 folder.
+
+
+
+17) Input Type Range
+---------------------
+:
+The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes:
+
+
+
+18) Input Type Search
+----------------------
+:
+The <input type="search"> is used for search fields (a search field behaves like a regular text field).
+
+
+
+19) Input Type Tel
+-------------------
+:
+The <input type="tel"> is used for input fields that should contain a telephone number.
+
+
+
+20) Input Type Time
+--------------------
+:
+The <input type="time"> allows the user to select a time (no time zone).
+
+Depending on browser support, a time picker can show up in the input field.
+
+
+
+20) Input Type Url
+-------------------
+:
+The <input type="url"> is used for input fields that should contain a URL address.
+
+Depending on browser support, the url field can be automatically validated when submitted.
+
+Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.
+
+
+
+21) Input Type Week
+--------------------
+:
+The <input type="week"> allows the user to select a week and year.
+
+Depending on browser support, a date picker can show up in the input field.
+
+

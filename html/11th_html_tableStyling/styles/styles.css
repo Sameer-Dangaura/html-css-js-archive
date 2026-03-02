@@ -1,0 +1,14 @@
+table{
+    border-collapse: collapse;
+    width:100%;
+}
+/* td:nth-child(even){
+    background-color: #d6eeee;
+} */
+
+tr{
+    border-bottom: 1px solid #ddd;
+}
+tr:hover{
+    background-color: #d6eeee;
+}

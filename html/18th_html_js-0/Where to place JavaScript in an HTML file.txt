@@ -1,0 +1,35 @@
+Q. Where to place JavaScript in an HTML file?
+Ans: From stackOverflow,
+
+As a rule of thumb, the best place to put <script> tags is the bottom of the page, just before </body> tag.
+
+ Something like this:
+-----------------------------------------------------------------------
+<html>
+    <head>
+        <title>My awesome page</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="...">
+        <link rel="stylesheet" type="text/css" href="...">
+        <link rel="stylesheet" type="text/css" href="...">
+        <link rel="stylesheet" type="text/css" href="...">
+
+    </head>
+    <body>
+        <!-- Content content content -->
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="..."></script>
+        <script type="text/javascript" src="..."></script>
+        <script type="text/javascript" src="..."></script>
+    </body>
+</html>
+-----------------------------------------------------------------------
+
+Q. Why?
+ans:
+    For that you can visit this webpage:
+    Yahoo! Developr's "Best Practices for Speeding Up Your Web Site".
+
+Do visit above provided Webpage, you will learn a lot of things from that.

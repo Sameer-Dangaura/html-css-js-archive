@@ -1,0 +1,107 @@
+<!-- 
+ Note: The      for attribute      of the <label> tag should be equal to the               id attribute        of the <input> element to bind them together.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Text fields</h2>
+    <form>
+        <label for="fname"> First Name: </label><br>
+
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname"> Last Name: </label><br>
+
+        <input type="text" id="lname" name="lname"><br>
+    </form>
+</body>
+</html>
+
+<!-- 
+//Here you will learn about   name attribute: 
+//For    value attribute   go to radio_buttons file. 
+
+Q. is it necessary to use the    name attribute      in <input> for the          text form :
+    <form action="">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    </form>
+
+Ans:
+----
+
+Yes, the     name attribute    is necessary if you plan to submit the form and access the form data on the server side. When the form is submitted, the browser sends the form data as   key-value pairs , where the     name attribute     is used as    the key ,    and the value is what the user enters into the input field.
+
+For example, if you submit the form without a       name attribute ,      the corresponding field's value will not be sent to the server. The    id attribute    is for client-side identification (such as for JavaScript or CSS), but it doesn't affect the form submission.
+
+
+If you omit the name attribute:
+----------------------------------------------
+<form action="">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname"><br>
+</form>
+-----------------------------------------------
+
+The form data for     fname     and     lname     would not be sent when the form is submitted.
+
+So, to capture input on form submission, the name attribute is essential.
+
+
+
+
+
+
+Q. what to write in name attribute then?
+Ans:
+----
+The      name attribute      in an <input> element should typically describe what the input represents, and it should match how you plan to handle the data on the server-side. The value of the name attribute will be the   key   used to reference the input's value after form submission.
+
+For example:
+--------------------------------------------------------
+<form action="">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>   //'fname' as the name 
+    
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>   //'lname' as the name 
+    
+    <input type="submit" value="Submit">
+</form>
+---------------------------------------------------------
+
+In this case:
+-------------
+* name="fname" represents the first name field.
+
+* name="lname" represents the last name field.
+
+Upon form submission, the data sent to the server will look like this:
+----------------------------
+fname=John&lname=Doe       |
+----------------------------
+
+The name attribute can be anything, but it's good practice to make it descriptive and related to the data being collected (e.g., name="email" for an email input, name="password" for a password input). This makes it easier to work with the form data in your backend code.
+
+ 
+
+
+
+------------------------------------------------------------------------------------
+Note:
+-----
+*It is not necessary to be same the   name attribute  and   id attribute  in <input> tag.
+-------------------------------------------------------------------------------------
+-->
+

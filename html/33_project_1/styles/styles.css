@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;     /* to understand this, you can visit 21th_html_layout/HTML_layout_techniques/css_float_layout/styles/styles.css */
+}
+
+
+/* styling main header of a page: */
+h1{
+    color: blue;
+    text-align: center;
+    font-size: 290%;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+main{
+    width: 25%;
+    margin: auto;   /*margin auto help to text align center when our width is not 100%. This we are using to align the login area center.*/
+}
+
+
+/* making width 100% of inputs(email, password, login): */
+#login, #password, #email{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;  /* we use padding to make boxes larger. */
+}
+
+
+/* styling buttons: login button and Create new account button: */
+#login{
+    background-color: blue;
+    color: white;
+}
+#create-new-account{
+    background-color: rgb(10, 173, 10);
+    color: white;
+    padding: 10px;
+}
+
+
+
+/* aliging center the link of forgottan account and Create new account button:   */
+/* div a, div button{
+
+    //remaining...
+
+} */
+
+/* styling forgotton account link:  */
+#forgot-account{   
+    text-align: center;
+    text-decoration: none;
+    color: rgb(91, 124, 255);
+} 
+
+
+
+/* styling horizontal line , text or , and again horizontal line in one line:  */
+/* #conjuction-symbol{
+
+}
+#left-line{
+
+}
+#conjuction{
+
+}
+#right-line{
+
+} */
+

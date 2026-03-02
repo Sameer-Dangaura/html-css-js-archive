@@ -1,0 +1,22 @@
+body{
+        background-color: powderblue;
+}
+
+h1{
+    color:blue;
+    font-size:300%;
+    font-family: Arial;
+    background-color: white;
+    border:2px solid hotpink;
+}
+
+p{
+    color:red;
+    background-color: white;
+    font-size:300%;
+    border:1px solid tomato;
+    padding:200px;
+    margin: 100px;
+    text-align:center;
+    font-family:Georgia;
+}
